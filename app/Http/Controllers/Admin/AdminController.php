@@ -1,14 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Routing\Controller as BaseController;
 
-class AdminIndexController extends Controller
+class AdminController extends BaseController
 {
-    /**
-     * Display a listing of the resource.
-     */
+    use AuthorizesRequests, ValidatesRequests;
+
     public function index()
     {
         return view('admin.index');

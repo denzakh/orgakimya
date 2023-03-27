@@ -1,21 +1,26 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
 use App\Models\News;
+use Illuminate\Http\Request;
 
 class NewsController extends Controller
 {
     // страница «news/»
     public function index()
     {
-        return view('news.index', ['news' => News::all()]);
+        // return view('news.index', ['news' => News::all()]);
+
+        $news = News::orderBy('id', 'desc')
+            ->paginate(10); // Трюк для получения пагинатора
+        return view('news.index')->with('news', $news);
+
     }
 
-    // страница «news/show/2»
-    public function show($id)
+
+    public function show(string $id)
     {
-        return view('news.show', ['news' => News::findOrFail($id)]);
+      return view('news.show', ['news' => News::findOrFail($id)]);
     }
+
 }
