@@ -2,10 +2,10 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\NewsController;
+use App\Http\Controllers\PostController;
 
-use App\Http\Controllers\Admin\AdminController;
-use App\Http\Controllers\Admin\NewsAdminController;
+use App\Http\Controllers\Admin\IndexAdminController;
+use App\Http\Controllers\Admin\PostAdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,22 +23,17 @@ Route::get('/', function () {
 });
 
 
-Route::get('news/',     [NewsController::class, 'index']);
-Route::get('news/{id}', [NewsController::class, 'show']);
+Route::get('posts/',     [PostController::class, 'index']);
+Route::get('posts/{id}', [PostController::class, 'show']);
 
 
 
 
 Route::prefix('admin')->group(function () {
-    Route::get('/', [AdminController::class, 'index']);
+    Route::get('/', [IndexAdminController::class, 'index']);
 
-	Route::resource('news', NewsAdminController::class);
+	Route::resource('posts', PostAdminController::class);
 
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 

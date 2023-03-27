@@ -312,8 +312,8 @@ return [
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'News',
-            'url'         => 'admin/news',
+            'text'        => 'Blog',
+            'url'         => 'admin/posts',
             'icon'        => 'far fa-fw fa-file',
             //'label'       => 'aaa',
             'label_color' => 'success',

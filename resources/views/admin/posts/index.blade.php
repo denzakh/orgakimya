@@ -1,10 +1,14 @@
-@extends('admin.layouts.app_admin')
+@extends('adminlte::page')
+
+@section('title', 'Posts')
 
 @section('content')
 
 <div class="container">
+  <hr>
 
-  <a href="{{route('admin.news')}}" class="btn btn-primary pull-right"><i class="fa fa-plus-square-o"></i> Создать категорию</a>
+  <a href="" class="btn btn-primary pull-right"><i class="fa fa-plus-square-o"></i> Создать категорию</a>
+
   <table class="table table-striped">
     <thead>
       <th>Наименование</th>
@@ -12,12 +16,12 @@
       <th class="text-right">Действие</th>
     </thead>
     <tbody>
-      @forelse ($data as $news)
+      @forelse ($posts as $post)
         <tr>
-          <td>{{$news->title}}</td>
-          <td>{{$news->published}}</td>
+          <td>{{$post->title}}</td>
+          <td>{{$post->text}}</td>
           <td>
-            <a href="{{route('admin.news.edit', ['id'=>$news->id])}}"><i class="fa fa-edit"></i></a>
+            <a href=""><i class="fa fa-edit"></i></a>
           </td>
         </tr>
       @empty
