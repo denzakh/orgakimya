@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
+
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -10,14 +11,13 @@ class PostAdminController extends Controller
     public function index()
     {
         return view('admin.posts.index', ['posts' => Post::all()]);
-
     }
 
 
 
     public function show(string $id)
     {
-      return view('posts.show', ['post' => Post::findOrFail($id)]);
+        return view('admin.posts.show', ['post' => Post::findOrFail($id)]);
     }
 
 
@@ -28,7 +28,10 @@ class PostAdminController extends Controller
      */
     public function create()
     {
-        return 111;//view('admin.posts.create');
+        return view('admin.posts.create', ['post' => [
+            'title' => '',
+            'text' => '',
+        ]]);
     }
 
     /**
@@ -41,42 +44,42 @@ class PostAdminController extends Controller
             'text' => 'required',
         ]);
 
-        posts::create($request->all());
+        Post::create($request->all());
 
-        return redirect()->route('posts.index')->with('success','posts created successfully.');
+        return redirect()->route('posts.index')->with('success', 'posts created successfully.');
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(posts $id)
+    public function edit(string $id)
     {
-        return view('posts.edit', ['posts' => posts::findOrFail($id)]);
+        return view('admin.posts.edit', ['post' => Post::findOrFail($id)]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, posts $posts)
+    public function update(Request $request, Post $post)
     {
         $request->validate([
             'title' => 'required',
             'text' => 'required',
         ]);
 
-        $posts->update($request->all());
+        $post->update($request->all());
 
-        return redirect()->route('posts.index')->with('success','posts updated successfully');
+        return redirect()->route('posts.index')->with('success', 'posts updated successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(posts $id)
+    public function destroy(Post $post)
     {
-       $posts->delete();
+        $post->delete();
 
-       return redirect()->route('posts.index')
-                       ->with('success','posts deleted successfully');
+        return redirect()->route('posts.index')
+            ->with('success', 'posts deleted successfully');
     }
 }
