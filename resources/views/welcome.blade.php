@@ -17,5 +17,30 @@
     </head>
     <body class="antialiased">
         <h1>Welcome</h1>
+
+
+        <a href="{{ LaravelLocalization::localizeUrl('/about') }}">@lang('Follow this link')</a>
+
+        <p>
+
+        {{ LaravelLocalization::getCurrentLocale() }}
+
+        {{ LaravelLocalization::getCurrentLocaleNative() }}
+        
+        </p>
+
+
+
+        <ul>
+        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+            <li>
+                <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                    {{ $properties['native'] }}
+                </a>
+            </li>
+        @endforeach
+</ul>
+
+
     </body>
 </html>

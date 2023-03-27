@@ -18,13 +18,47 @@ use App\Http\Controllers\Admin\PostAdminController;
 |
 */
 
+
+// Route::group(['prefix' => LaravelLocalization::setLocale()], function()
+// {
+
+
+// 	Route::get('about',function(){
+// 		return View::make('about');
+// 	});
+// });
+
+Route::group([
+	'prefix' => LaravelLocalization::setLocale(),
+    'middleware' => [ 'localize' ]], 
+    function () {
+
+		/** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
+		Route::get('/', function()
+		{
+			return View::make('welcome');
+		});    	
+
+	    Route::get(LaravelLocalization::transRoute('routes.about'), function () {
+	        return view('about');
+	    });
+
+		Route::get(LaravelLocalization::transRoute('routes.posts'), [PostController::class, 'index']);
+	    Route::get(LaravelLocalization::transRoute('routes.posts').'/{id}', [PostController::class, 'show']);
+
+    //,...
+});
+
+
+
+
 Route::get('/', function () {
     return view('welcome');
 });
 
 
-Route::get('posts/',     [PostController::class, 'index']);
-Route::get('posts/{id}', [PostController::class, 'show']);
+// Route::get('posts/',     [PostController::class, 'index']);
+// Route::get('posts/{id}', [PostController::class, 'show']);
 
 
 

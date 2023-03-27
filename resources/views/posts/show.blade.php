@@ -1,3 +1,3 @@
-<h1>{{ $news->title }}</h1>
+<h1>{{ $post->title }}</h1>
 
-{!! $news->text !!}
+{!! $post->text !!}
