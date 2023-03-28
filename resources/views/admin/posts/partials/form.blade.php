@@ -6,9 +6,10 @@
 
 	$localeAreaArray = [
 		'text',
-	]
+	];
 
-	$oneInputFieldArray = [
+	$mediaInputFieldArray = [
+		'img',
 		'doc',
 		'video',
 	];
@@ -46,20 +47,16 @@
 	@endforeach
 @endforeach
 
-<h2 class="pt-2">Common</h2>
-@foreach($oneInputFieldArray as $inputName)
+<h2 class="pt-2">media</h2>
+@foreach($mediaInputFieldArray as $inputName)
+    @php   
+    	$inputValue = isset($post) ? $post[$inputName] : '';
+    @endphp 
 
-	@foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $localeCodeProperties)
-	    @php   
-	    	$inputValue = isset($post) ? $post[$inputName] : '';
-	    @endphp 
-
-	    <div>
-		    <label for="">{{ $inputName }}</label>
-			<input type="text" class="form-control" name="{{ $inputName }}" placeholder="" value="{{ $inputValue }}"> 
-		<div>
-
-	@endforeach
+    <div>
+	    <label for="">{{ $inputName }}</label>
+		<input type="text" class="form-control" name="{{ $inputName }}" placeholder="" value="{{ $inputValue }}"> 
+	<div>
 @endforeach
 
 <div class="pt-4">
