@@ -20,14 +20,6 @@ $menu = config('menu');
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     @each('layouts.partials.nav-item', $menu, 'item', 'empty')
-
-
-                    <x-nav-link 
-                        :href="LaravelLocalization::localizeUrl('/about')" 
-                    >
-                        {{ __('Menu: About') }}
-                    </x-nav-link>
-
                 </div>
             </div>
 
@@ -36,7 +28,7 @@ $menu = config('menu');
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
                         <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
-                            <div>111</div>
+                            <div style="text-transform: capitalize;">{{ App::currentLocale() }}</div>
 
                             <div class="ml-1">
                                 <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -47,20 +39,14 @@ $menu = config('menu');
                     </x-slot>
 
                     <x-slot name="content">
-                        <x-dropdown-link :href="route('profile.edit')">
-                            {{ __('Profile') }}
-                        </x-dropdown-link>
-
-                        <!-- Authentication -->
-                        <form method="POST" action="{{ route('logout') }}">
-                            @csrf
-
-                            <x-dropdown-link :href="route('logout')"
-                                    onclick="event.preventDefault();
-                                                this.closest('form').submit();">
-                                {{ __('Log Out') }}
+                        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                            <x-dropdown-link 
+                                hreflang="{{ $localeCode }}" 
+                                href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}"  
+                                style="text-transform: capitalize;">
+                                    {{ $properties['native'] }}
                             </x-dropdown-link>
-                        </form>
+                        @endforeach
                     </x-slot>
                 </x-dropdown>
             </div>
