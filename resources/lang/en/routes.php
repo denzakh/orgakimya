@@ -1,6 +1,10 @@
 <?php
 // resources/lang/en/routes.php
 return [
-    "about"    =>  "about",
-    "posts"  =>  "posts",
+	'about' => 'about',
+	'services' => 'services',
+	'applications' => 'applications',
+	'posts' => 'posts',
+	'articles' => 'articles',
+	'contacts' => 'contacts',
 ];
