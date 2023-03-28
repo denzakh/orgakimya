@@ -17,10 +17,9 @@
             <tbody>
                 @forelse ($posts as $post)
                     <tr>
-                        <td>{{ $post->title }}</td>
-                        <td>{{ $post->text }}</td>
+                        <td>{{ $post->id }}</td>
+                        <td>{{ $post->title_en }}</td>
                         <td>
-                            <a href="{{ route('posts.show', $post) }}" class="btn btn-info">View</a>
                             <a href="{{ route('posts.edit', $post) }}" class="btn btn-success">Edit</a>
 
                             <form action="{{ route('posts.destroy', $post->id) }}" method="Post" class="d-inline-block">

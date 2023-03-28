@@ -28,10 +28,7 @@ class PostAdminController extends Controller
      */
     public function create()
     {
-        return view('admin.posts.create', ['post' => [
-            'title' => '',
-            'text' => '',
-        ]]);
+        return view('admin.posts.create');
     }
 
     /**

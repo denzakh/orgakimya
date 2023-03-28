@@ -15,7 +15,7 @@
                 @empty
                     <tr>
                         <td colspan="2" class="text-center">
-                            <h2>Данные отсутствуют</h2>
+                            -
                         </td>
                     </tr>
                 @endforelse
