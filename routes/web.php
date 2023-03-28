@@ -13,7 +13,7 @@ use App\Http\Controllers\Admin\ServiceAdminController;
 // use App\Http\Controllers\Admin\ApplicationAdminController;
 // use App\Http\Controllers\Admin\ArticleAdminController;
 
-
+use App\Http\Controllers\Admin\UploadImageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -91,6 +91,9 @@ Route::prefix('admin')->group(function () {
 	// Route::resource('applications', ApplicationsAdminController::class);
 	Route::resource('posts', PostAdminController::class);
 	// Route::resource('article', ArticlesAdminController::class);
+ 
+	Route::get('upload-image', [UploadImageController::class, 'index']);
+	Route::post('save', [UploadImageController::class, 'save']);
 
 })->middleware(['auth', 'verified'])->name('dashboard');
 

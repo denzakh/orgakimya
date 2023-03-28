@@ -343,6 +343,11 @@ return [
             'url'         => 'admin/settings',
             'icon'        => 'fas fa-fw fa-lock',
         ],
+        [
+            'text'        => 'Upload image',
+            'url'         => 'admin/upload-image',
+            'icon'        => 'fas fa-fw fa-image',
+        ],
         // ['header' => 'account_settings'],
         // [
         //     'text' => 'profile',
