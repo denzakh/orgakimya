@@ -5,10 +5,12 @@
             <tbody>
                 @forelse ($posts as $post)
                     <tr>
-                        <td>{{ $post->title }}</td>
+                        <td>                            
+                            <a href="{{ LaravelLocalization::localizeUrl('/posts').'/'.$post->id }}">
+                               {{ $post->id }}.  {{ $post->title }}
+                            </a>                            
+                        </td>
                         <td>
-                            {{ $post->published }}
-                            <a href="{{ LaravelLocalization::localizeUrl('/posts').'/'.$post->id }}">@lang('Follow this link')</a>
                         </td>
                         
                     </tr>
