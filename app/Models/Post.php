@@ -16,14 +16,16 @@ class Post extends LocalizableModel
 		'text_en',
 		'text_tr',
 		'text_ru',
-        'img_en',
-        'img_tr',
-        'img_ru',
+        'img',
+        'video',
+        'doc',
     ];
 
     protected $localizable = [
         'title',
         'text',
         'img',
+        'video',
+        'doc',
     ];
 }

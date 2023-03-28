@@ -19,9 +19,9 @@ return new class extends Migration
             $table->string('text_en')->nullable();
             $table->string('text_tr')->nullable();
             $table->string('text_ru')->nullable();
-            $table->string('img_en')->nullable();
-            $table->string('img_tr')->nullable();
-            $table->string('img_ru')->nullable();
+            $table->string('img')->nullable();
+            $table->string('video')->nullable();
+            $table->string('doc')->nullable();
             $table->timestamps();
         });
     }

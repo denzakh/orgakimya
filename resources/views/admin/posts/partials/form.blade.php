@@ -2,12 +2,16 @@
 @php
 	$localeFieldArray = [
 		'title',
-		'img',
 	];
 
 	$localeAreaArray = [
 		'text',
 	]
+
+	$oneInputFieldArray = [
+		'doc',
+		'video',
+	];
 @endphp
 
 @foreach($localeFieldArray as $fieldName)
@@ -37,6 +41,22 @@
 	    <div>
 		    <label for="">{{ $inputName }}</label>
 			<textarea type="text" class="form-control" name="{{ $inputName }}" placeholder="" required>{{ $inputValue }}</textarea>
+		<div>
+
+	@endforeach
+@endforeach
+
+<h2 class="pt-2">Common</h2>
+@foreach($oneInputFieldArray as $inputName)
+
+	@foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $localeCodeProperties)
+	    @php   
+	    	$inputValue = isset($post) ? $post[$inputName] : '';
+	    @endphp 
+
+	    <div>
+		    <label for="">{{ $inputName }}</label>
+			<input type="text" class="form-control" name="{{ $inputName }}" placeholder="" value="{{ $inputValue }}"> 
 		<div>
 
 	@endforeach
