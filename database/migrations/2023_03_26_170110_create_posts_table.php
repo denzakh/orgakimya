@@ -13,12 +13,15 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->string('title_en');
-            $table->string('title_tr');
-            $table->string('title_ru');
-            $table->string('text_en');
-            $table->string('text_tr');
-            $table->string('text_ru');
+            $table->string('title_en')->nullable();
+            $table->string('title_tr')->nullable();
+            $table->string('title_ru')->nullable();
+            $table->string('text_en')->nullable();
+            $table->string('text_tr')->nullable();
+            $table->string('text_ru')->nullable();
+            $table->string('img_en')->nullable();
+            $table->string('img_tr')->nullable();
+            $table->string('img_ru')->nullable();
             $table->timestamps();
         });
     }

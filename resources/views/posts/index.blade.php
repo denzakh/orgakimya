@@ -1,27 +1,24 @@
-
+<x-layout>
     <div class="container">
+        <h1>{{ __('Menu: Posts') }}</h1>
 
-        <table class="table table-striped">
-            <tbody>
-                @forelse ($posts as $post)
-                    <tr>
-                        <td>                            
-                            <a href="{{ LaravelLocalization::localizeUrl('/posts').'/'.$post->id }}">
-                               {{ $post->id }}.  {{ $post->title }}
-                            </a>                            
-                        </td>
-                        <td>
-                        </td>
-                        
-                    </tr>
-                @empty
-                    <tr>
-                        <td colspan="2" class="text-center">
-                            -
-                        </td>
-                    </tr>
-                @endforelse
-            </tbody>
-        </table>
+        @forelse ($posts as $post)
+            <div>
+                <h2>
+                    <a href="{{ LaravelLocalization::localizeUrl('/posts').'/'.$post->id }}">
+                       {{ $post->title }}
+                    </a>  
+                </h2>
+
+                <div>
+                    {{ $post->text }}
+                </div>                        
+            </div>                        
+        @empty
+
+        @endforelse
     </div>
+</x-layout>
+
+
 

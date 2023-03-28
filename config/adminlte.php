@@ -312,9 +312,19 @@ return [
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'Blog',
+            'text'        => 'Services',
+            'url'         => 'admin/services',
+            'icon'        => 'far fa-fw fa-square',
+        ],   
+        [
+            'text'        => 'Applications',
+            'url'         => 'admin/applications',
+            'icon'        => 'far fa-fw fa-solid fa-circle',
+        ],             
+        [
+            'text'        => 'News',
             'url'         => 'admin/posts',
-            'icon'        => 'far fa-fw fa-file',
+            'icon'        => 'far fa-fw fa-paper-plane',
             //'label'       => 'aaa',
             'label_color' => 'success',
         ],
@@ -324,17 +334,7 @@ return [
             'icon'        => 'far fa-fw fa-file-alt',
         ],
         [
-            'text'        => 'Services',
-            'url'         => 'admin/services',
-            'icon'        => 'far fa-fw fa-square',
-        ],
-        [
-            'text'        => 'Docs',
-            'url'         => 'admin/docs',
-            'icon'        => 'far fa-fw fa-folder',
-        ],
-        [
-            'text'        => 'Partner',
+            'text'        => 'Partners',
             'url'         => 'admin/partners',
             'icon'        => 'far fa-fw fa-user',
         ],

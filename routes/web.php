@@ -3,9 +3,17 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ServiceController;
+// use App\Http\Controllers\ApplicationController;
+// use App\Http\Controllers\ArticleController;
 
 use App\Http\Controllers\Admin\IndexAdminController;
 use App\Http\Controllers\Admin\PostAdminController;
+use App\Http\Controllers\Admin\ServiceAdminController;
+// use App\Http\Controllers\Admin\ApplicationAdminController;
+// use App\Http\Controllers\Admin\ArticleAdminController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -43,11 +51,8 @@ Route::group([
 			return view('about');
 		});
 
-		// Route::get(LaravelLocalization::transRoute('routes.services'), [ServiceController::class, 'index']);
-		// Route::get(LaravelLocalization::transRoute('routes.services').'/{id}', [ServiceController::class, 'show']);
-
-		// Route::get(LaravelLocalization::transRoute('routes.services'), [ServiceController::class, 'index']);
-		// Route::get(LaravelLocalization::transRoute('routes.services').'/{id}', [ServiceController::class, 'show']);
+		Route::get(LaravelLocalization::transRoute('routes.services'), [ServiceController::class, 'index']);
+		Route::get(LaravelLocalization::transRoute('routes.services').'/{id}', [ServiceController::class, 'show']);
 
 		// Route::get(LaravelLocalization::transRoute('routes.applications'), [ApplicationController::class, 'index']);
 		// Route::get(LaravelLocalization::transRoute('routes.applications').'/{id}', [ApplicationController::class, 'show']);
@@ -82,7 +87,10 @@ Route::get('/', function () {
 Route::prefix('admin')->group(function () {
 	Route::get('/', [IndexAdminController::class, 'index']);
 
+	Route::resource('services', ServiceAdminController::class);
+	// Route::resource('applications', ApplicationsAdminController::class);
 	Route::resource('posts', PostAdminController::class);
+	// Route::resource('article', ArticlesAdminController::class);
 
 })->middleware(['auth', 'verified'])->name('dashboard');
 

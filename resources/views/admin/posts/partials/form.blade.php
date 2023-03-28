@@ -2,6 +2,7 @@
 @php
 	$localeFieldArray = [
 		'title',
+		'img',
 	];
 
 	$localeAreaArray = [
@@ -19,7 +20,7 @@
 
 	    <div>
 		    <label for="">{{ $inputName }}</label>
-			<input type="text" class="form-control" name="{{ $inputName }}" placeholder="" value="{{ $inputValue }}" required> 
+			<input type="text" class="form-control" name="{{ $inputName }}" placeholder="" value="{{ $inputValue }}"> 
 		<div>
 
 	@endforeach
