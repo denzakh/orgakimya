@@ -23,28 +23,34 @@ class UploadImageController extends Controller
         $data = $request->all();
         $fileObj = $data['image'];
         $filename    = $fileObj->getClientOriginalName(); //image_file is the name of the file field used in the form in blade
-        $newFilename =  time(). '.' .$filename;
-        $originalExtension = $fileObj->getClientOriginalExtension(); //
+        $originalExtension = '.'.$fileObj->getClientOriginalExtension(); //
+        $newFilename =  time(); //.$filename;
+
+        
 
 		
         //Сохраняем оригинальную картинку
-        $data['image']->move(Storage::path('/public/images/').'origin/',$newFilename);
+        $fileObj->move(Storage::path('/public/images/').'origin/',$newFilename.$originalExtension);
 
-        $img = Image::make(Storage::path('/public/images/').'origin/'.$newFilename);
-		$img->save(Storage::path('/public/images/').'normal/'.$newFilename, 75); 
+
+		//Создаем обычный вариант
+        $img = Image::make(Storage::path('/public/images/').'origin/'.$newFilename.$originalExtension);
+        $img->fit(1200, 1200); // обрезаем до
+		$img->save(Storage::path('/public/images/').'normal/'.$newFilename.$originalExtension, 75);         
+
+        // webp
+        $imgWebp = $img->encode('webp', 75);  // 75 is image quality and its value can be 1 to 100
+		$imgWebp->save(Storage::path('/public/images/').'normal/'.$newFilename.'.webp'); // 75 is the image quality
 
 
         //Создаем миниатюру изображения и сохраняем ее
-        $thumbnail = Image::make(Storage::path('/public/images/').'origin/'.$newFilename);
-        $thumbnail->fit(300, 300);
-        $thumbnail->save(Storage::path('/public/images/').'thumbnail/'.$newFilename, 75);// 75 is the image quality
+        $thumbnail = Image::make(Storage::path('/public/images/').'origin/'.$newFilename.$originalExtension);
+        $thumbnail->fit(640, 640);
+        $thumbnail->save(Storage::path('/public/images/').'thumbnail/'.$newFilename.$originalExtension, 75);// 75 is the image quality
 
-
-
-
-
-
-
+        // webp
+        $thumbnailWebp = $img->encode('webp', 75);  // 75 is image quality and its value can be 1 to 100
+		$thumbnailWebp->save(Storage::path('/public/images/').'thumbnail/'.$newFilename.'.webp'); // 75 is the image quality
 
         // $save = new Photo;
  
