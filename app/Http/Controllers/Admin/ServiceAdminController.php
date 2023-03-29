@@ -74,7 +74,7 @@ class ServiceAdminController extends Controller
                     'normal' => 1200,
                     'thumbnail' => 640,
                 ],
-                'catalog' => 'service',
+                'catalog' => 'services',
                 'isWebp' => true,
                 'quality' => 75, 
             ];
