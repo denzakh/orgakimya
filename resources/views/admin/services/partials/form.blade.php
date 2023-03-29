@@ -8,9 +8,12 @@
 		'text',
 	];
 
-	$mediaInputFieldArray = [
+	$mediaInputFieldArrayRO = [
 		'img',
 		'doc',
+	];
+
+	$mediaInputFieldArray = [
 		'video',
 	];
 @endphp
@@ -49,6 +52,29 @@
 
 
 <h2 class="pt-2">media</h2>
+
+    <div>
+	    <label for="">img</label>
+		<input type="text" class="form-control" name="img" placeholder="" value="{{ $service['img'] }}" readonly> 
+	<div>
+
+	<div class="pt-2">
+	    <div class="form-group">
+	        <input type="file" name="file-img" placeholder="">
+	    </div>
+	</div>		
+
+    <div>
+	    <label for="">doc</label>
+		<input type="text" class="form-control" name="doc" placeholder="" value="{{ $service['doc'] }}" readonly> 
+	<div>
+
+	<div class="pt-2">
+	    <div class="form-group">
+	        <input type="file" name="file-doc" placeholder="" id="file-doc">
+	    </div>
+	</div>	
+
 @foreach($mediaInputFieldArray as $inputName)
     @php   
     	$inputValue = isset($post) ? $post[$inputName] : '';
@@ -60,7 +86,8 @@
 	<div>
 @endforeach
 
-<div class="pt-4">
+
+<div class="pt-4 pb-4">
 	<input class="btn btn-primary" type="submit" value="Сохранить">
 </div>
 

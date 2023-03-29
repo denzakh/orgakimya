@@ -4,6 +4,11 @@
 
         @forelse ($services as $service)
             <div>
+
+
+                {{ $service->img }}
+
+
                 <h2>{{ $service->title }}</h2>
 
                 <div>

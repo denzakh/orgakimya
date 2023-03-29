@@ -28,7 +28,9 @@ class ServiceAdminController extends Controller
             'title_en' => 'required',
         ]);
 
-        Service::create($request->all());
+        $data = $this->getAllData($request);
+
+        Service::create($data);
 
         return redirect()->route('services.index')->with('success', 'services created successfully.');
     }
@@ -44,7 +46,9 @@ class ServiceAdminController extends Controller
             'title_en' => 'required',
         ]);
 
-        $service->update($request->all());
+        $data = $this->getAllData($request);
+
+        $service->update($data);
 
         return redirect()->route('services.index')->with('success', 'services updated successfully');
     }
@@ -55,5 +59,34 @@ class ServiceAdminController extends Controller
 
         return redirect()->route('services.index')
             ->with('success', 'services deleted successfully');
+    }
+
+    private function getAllData(Request $request) {
+
+        $data = $request->all();
+
+        if($data['file-img']) {
+            $fileObj = $data['file-img'];
+
+            $options = [
+                'files' => [$fileObj],
+                'sizes' => [
+                    'normal' => 1200,
+                    'thumbnail' => 640,
+                ],
+                'catalog' => 'service',
+                'isWebp' => true,
+                'quality' => 75, 
+            ];
+
+            $result = [];
+
+            if (function_exists('create_sized_images')) {
+                $result = create_sized_images($options);
+                $data['img'] = $result[0]['title'];               
+            }
+        }
+
+        return $data;
     }
 }
