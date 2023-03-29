@@ -1,0 +1,32 @@
+namespace Database\Seeders;
+
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+
+class XxxSeeder extends Seeder
+{
+	public $items = [
+		[
+			'title_en' => '',
+			'title_tr' => '',
+			'title_ru' => '',
+			'text_en' => '',
+			'text_tr' => '',
+			'text_ru' => '',
+			'img_en' => '',
+			'img_tr' => '',
+			'img_ru' => '',
+
+		],
+	];
+
+	/**
+	 * Run the database seeds.
+	 */
+	public function run(): void
+	{
+		foreach( $this->items as $item ) {
+            DB::table('xxxs')->insert($item);
+        }
+	}
+}
