@@ -73,13 +73,13 @@ if (!function_exists('create_sized_images')) {
 
 if (!function_exists('get_picture_th')) {
 
-    function get_picture_th($cat, $img)
+    function get_picture_th($cat, $img, $exe = 'jpg')
     {
         $path = '/storage/images/' . $cat;
 
         $str =  '<picture>';
-        $str .= '<source type="image/webp" srcset="' . $path . '/thumbnail/' . $img . '.webp">';
-        $str .= '<img src="' . $path . '/thumbnail/' . $img . '.jpg" alt="">';
+        $str .= '<source type="image/webp" srcset="' . $path . $img . '.webp">';
+        $str .= '<img src="' . $path . $img . '.' . $exe . '" alt="">';
         $str .= '</picture>';
 
         return $str;

@@ -12,7 +12,7 @@
                     {{ $post->text }}
                 </div>
 
-                {!! get_picture_th('posts', $post['img']) !!}
+                {!! get_picture_th('posts/thumbnail/', $post['img']) !!}
             </div>
         @empty
         @endforelse

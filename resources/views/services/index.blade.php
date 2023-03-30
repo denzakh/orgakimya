@@ -13,7 +13,7 @@
         @forelse ($services as $service)
             <div style="display: inline-block; vertical-align: top; max-width: 300px; margin-right: 50px; margin-bottom: 50px;">
 
-                {!! get_picture_th('services', $service['img']) !!}
+                {!! get_picture_th('services/thumbnail/', $service['img']) !!}
 
 
                 <h2>{{ $service->title }} </h2>

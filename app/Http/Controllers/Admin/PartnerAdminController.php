@@ -25,7 +25,7 @@ class PartnerAdminController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title_en' => 'required',
+            'title' => 'required',
         ]);
 
         $data = $this->getAllData($request);
@@ -43,7 +43,7 @@ class PartnerAdminController extends Controller
     public function update(Request $request, Partner $partner)
     {
         $request->validate([
-            'title_en' => 'required',
+            'title' => 'required',
         ]);
 
         $data = $this->getAllData($request);
@@ -71,8 +71,7 @@ class PartnerAdminController extends Controller
             $options = [
                 'files' => [$fileObj],
                 'sizes' => [
-                    'normal' => 1200,
-                    'thumbnail' => 640,
+                    '200' => 200,
                 ],
                 'catalog' => 'partners',
                 'isWebp' => true,
