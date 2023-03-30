@@ -28,7 +28,9 @@ class PostAdminController extends Controller
             'title_en' => 'required',
         ]);
 
-        Post::create($request->all());
+        $data = $this->getAllData($request);
+
+        Post::create($data);
 
         return redirect()->route('posts.index')->with('success', 'posts created successfully.');
     }
@@ -44,7 +46,9 @@ class PostAdminController extends Controller
             'title_en' => 'required',
         ]);
 
-        $post->update($request->all());
+        $data = $this->getAllData($request);
+
+        $post->update($data);
 
         return redirect()->route('posts.index')->with('success', 'posts updated successfully');
     }
@@ -55,5 +59,35 @@ class PostAdminController extends Controller
 
         return redirect()->route('posts.index')
             ->with('success', 'posts deleted successfully');
+    }
+
+    private function getAllData(Request $request)
+    {
+
+        $data = $request->all();
+
+        if ($data['file-img']) {
+            $fileObj = $data['file-img'];
+
+            $options = [
+                'files' => [$fileObj],
+                'sizes' => [
+                    'normal' => 1200,
+                    'thumbnail' => 640,
+                ],
+                'catalog' => 'posts',
+                'isWebp' => true,
+                'quality' => 75,
+            ];
+
+            $result = [];
+
+            if (function_exists('create_sized_images')) {
+                $result = create_sized_images($options);
+                $data['img'] = $result[0]['title'];
+            }
+        }
+
+        return $data;
     }
 }

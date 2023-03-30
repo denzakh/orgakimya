@@ -10,9 +10,9 @@
 
         <table class="table table-striped">
             <thead>
-                <th>Наименование</th>
-                <th>Публикация</th>
-                <th class="text-right">Действие</th>
+                <th>N</th>
+                <th>Title</th>
+                <th class="text-right"></th>
             </thead>
             <tbody>
                 @forelse ($posts as $post)

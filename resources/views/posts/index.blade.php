@@ -5,20 +5,16 @@
         @forelse ($posts as $post)
             <div>
                 <h2>
-                    <a href="{{ LaravelLocalization::localizeUrl('/posts').'/'.$post->id }}">
-                       {{ $post->title }}
-                    </a>  
+                    {{ $post->title }}
                 </h2>
 
                 <div>
                     {{ $post->text }}
-                </div>                        
-            </div>                        
-        @empty
+                </div>
 
+                {!! get_picture_th('posts', $post['img']) !!}
+            </div>
+        @empty
         @endforelse
     </div>
 </x-layout>
-
-
-

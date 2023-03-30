@@ -4,14 +4,16 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ServiceController;
-// use App\Http\Controllers\ApplicationController;
-// use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ApplicationController;
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\PartnerController;
 
 use App\Http\Controllers\Admin\IndexAdminController;
 use App\Http\Controllers\Admin\PostAdminController;
 use App\Http\Controllers\Admin\ServiceAdminController;
-// use App\Http\Controllers\Admin\ApplicationAdminController;
-// use App\Http\Controllers\Admin\ArticleAdminController;
+use App\Http\Controllers\Admin\ApplicationAdminController;
+use App\Http\Controllers\Admin\ArticleAdminController;
+use App\Http\Controllers\Admin\PartnerAdminController;
 
 use App\Http\Controllers\Admin\UploadImageController;
 
@@ -52,16 +54,16 @@ Route::group([
 		});
 
 		Route::get(LaravelLocalization::transRoute('routes.services'), [ServiceController::class, 'index']);
-		Route::get(LaravelLocalization::transRoute('routes.services').'/{id}', [ServiceController::class, 'show']);
+		// Route::get(LaravelLocalization::transRoute('routes.services').'/{id}', [ServiceController::class, 'show']);
 
-		// Route::get(LaravelLocalization::transRoute('routes.applications'), [ApplicationController::class, 'index']);
-		// Route::get(LaravelLocalization::transRoute('routes.applications').'/{id}', [ApplicationController::class, 'show']);
+		Route::get(LaravelLocalization::transRoute('routes.applications'), [ApplicationController::class, 'index']);
+		Route::get(LaravelLocalization::transRoute('routes.applications').'/{id}', [ApplicationController::class, 'show']);
 
 		Route::get(LaravelLocalization::transRoute('routes.posts'), [PostController::class, 'index']);
 		Route::get(LaravelLocalization::transRoute('routes.posts').'/{id}', [PostController::class, 'show']);
 
-		// Route::get(LaravelLocalization::transRoute('routes.articles'), [ArticleController::class, 'index']);
-		// Route::get(LaravelLocalization::transRoute('routes.articles').'/{id}', [ArticleController::class, 'show']);
+		Route::get(LaravelLocalization::transRoute('routes.articles'), [ArticleController::class, 'index']);
+		Route::get(LaravelLocalization::transRoute('routes.articles').'/{id}', [ArticleController::class, 'show']);
 
 		Route::get(LaravelLocalization::transRoute('routes.contacts'), function () {
 			return view('contacts');
@@ -88,9 +90,10 @@ Route::prefix('admin')->group(function () {
 	Route::get('/', [IndexAdminController::class, 'index']);
 
 	Route::resource('services', ServiceAdminController::class);
-	// Route::resource('applications', ApplicationsAdminController::class);
+	Route::resource('applications', ApplicationAdminController::class);
 	Route::resource('posts', PostAdminController::class);
-	// Route::resource('article', ArticlesAdminController::class);
+	Route::resource('articles', ArticleAdminController::class);
+	Route::resource('partners', PartnerAdminController::class);
  
 	Route::get('upload-image', [UploadImageController::class, 'index']);
 	Route::post('save', [UploadImageController::class, 'save']);

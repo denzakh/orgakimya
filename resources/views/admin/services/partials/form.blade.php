@@ -8,11 +8,6 @@
 		'text',
 	];
 
-	$mediaInputFieldArrayRO = [
-		'img',
-		'doc',
-	];
-
 	$mediaInputFieldArray = [
 		'video',
 	];

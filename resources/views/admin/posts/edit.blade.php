@@ -5,7 +5,7 @@
 @section('content')
 
 <div class="container">
-  <form class="form-horizontal" action="{{route('posts.update', $post->id)}}" method="post">
+  <form class="form-horizontal" action="{{route('posts.update', $post->id)}}" method="post"  enctype="multipart/form-data">
     @method('PUT')
     @csrf
 

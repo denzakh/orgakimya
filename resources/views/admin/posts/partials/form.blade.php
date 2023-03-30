@@ -9,8 +9,6 @@
 	];
 
 	$mediaInputFieldArray = [
-		'img',
-		'doc',
 		'video',
 	];
 @endphp
@@ -48,6 +46,30 @@
 @endforeach
 
 <h2 class="pt-2">media</h2>
+
+    <div>
+	    <label for="">img</label>
+		<input type="text" class="form-control" name="img" placeholder="" value="{{ $post['img'] }}" readonly> 
+	<div>
+
+	<div class="pt-2">
+	    <div class="form-group">
+	        <input type="file" name="file-img" placeholder="">
+	    </div>
+	</div>		
+
+    <div>
+	    <label for="">doc</label>
+		<input type="text" class="form-control" name="doc" placeholder="" value="{{ $post['doc'] }}" readonly> 
+	<div>
+
+	<div class="pt-2">
+	    <div class="form-group">
+	        <input type="file" name="file-doc" placeholder="" id="file-doc">
+	    </div>
+	</div>	
+
+
 @foreach($mediaInputFieldArray as $inputName)
     @php   
     	$inputValue = isset($post) ? $post[$inputName] : '';
