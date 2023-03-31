@@ -61,12 +61,12 @@ class ArticleAdminController extends Controller
             ->with('success', 'articles deleted successfully');
     }
 
-    private function getAllData(Request $request) {
-
+    private function getAllData(Request $request)
+    {
         $data = $request->all();
 
         // save img
-        if(isset($data['file-img']) && $data['file-img']) {
+        if (isset($data['file-img']) && $data['file-img']) {
             $fileObj = $data['file-img'];
 
             $options = [
@@ -77,19 +77,19 @@ class ArticleAdminController extends Controller
                 ],
                 'catalog' => 'articles',
                 'isWebp' => true,
-                'quality' => 75, 
+                'quality' => 75,
             ];
 
             $result = [];
 
             if (function_exists('create_sized_images')) {
                 $result = create_sized_images($options);
-                $data['img'] = $result[0]['title'];               
+                $data['img'] = $result[0]['title'];
             }
         }
 
         // save doc
-        if(isset($data['file-doc']) && $data['file-doc']) {
+        if (isset($data['file-doc']) && $data['file-doc']) {
             $fileObj = $data['file-doc'];
 
             $options = [
@@ -101,7 +101,7 @@ class ArticleAdminController extends Controller
 
             if (function_exists('save_doc_helper')) {
                 $result = save_doc_helper($options);
-                $data['doc'] = $result[0]['title'];               
+                $data['doc'] = $result[0]['title'];
             }
         }
 

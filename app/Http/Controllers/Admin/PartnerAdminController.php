@@ -61,11 +61,11 @@ class PartnerAdminController extends Controller
             ->with('success', 'partners deleted successfully');
     }
 
-    private function getAllData(Request $request) {
-
+    private function getAllData(Request $request)
+    {
         $data = $request->all();
 
-        if($data['file-img']) {
+        if ($data['file-img']) {
             $fileObj = $data['file-img'];
 
             $options = [
@@ -75,14 +75,14 @@ class PartnerAdminController extends Controller
                 ],
                 'catalog' => 'partners',
                 'isWebp' => true,
-                'quality' => 75, 
+                'quality' => 75,
             ];
 
             $result = [];
 
             if (function_exists('create_sized_images')) {
                 $result = create_sized_images($options);
-                $data['img'] = $result[0]['title'];               
+                $data['img'] = $result[0]['title'];
             }
         }
 

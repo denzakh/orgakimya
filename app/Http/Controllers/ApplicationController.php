@@ -16,6 +16,6 @@ class ApplicationController extends Controller
 
     public function show(string $id)
     {
-      return view('applications.show', ['application' => Application::findOrFail($id)]);
+        return view('applications.show', ['application' => Application::findOrFail($id)]);
     }
 }

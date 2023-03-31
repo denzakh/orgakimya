@@ -2,18 +2,17 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
 class ApplicationSeeder extends Seeder
 {
-	public $items = [
-		[
-			'title_en' => 'Bad odor elimination through spray method notralization sytem',
-			'title_tr' => 'Kötü kokularin ortadan kaldirilmasi i̇çi̇n sprey yöntemi̇yle nötrali̇zasyon si̇stemi̇',
-			'title_ru' => 'Cистема нейтрализации методом распыления для устранения неприятных запахов',
-			'text_en' => '<p>Failure to control bad odors in factories can adversely affect the health of employees as well as causing penalties. It can cause health problems such as Asthma as well as skin irritation and breathing difficulties.</p>
+    public $items = [
+        [
+            'title_en' => 'Bad odor elimination through spray method notralization sytem',
+            'title_tr' => 'Kötü kokularin ortadan kaldirilmasi i̇çi̇n sprey yöntemi̇yle nötrali̇zasyon si̇stemi̇',
+            'title_ru' => 'Cистема нейтрализации методом распыления для устранения неприятных запахов',
+            'text_en' => '<p>Failure to control bad odors in factories can adversely affect the health of employees as well as causing penalties. It can cause health problems such as Asthma as well as skin irritation and breathing difficulties.</p>
 
 <p>To prevent bad odors, some factories apply masking solutions. But these solutions are not very suitable. Because in the masking method, bad odor molecules are not removed, only a stronger odor is suppressed so that bad odor is not felt. So, if you are looking for a more reliable solution, it is smarter to consider investing in neutralizer chemical fogging systems. These solutions are not only low cost effective but also much more efficient.</p>
 
@@ -27,7 +26,7 @@ class ApplicationSeeder extends Seeder
 	<li>Microbial decomposition of animal waste</li>
 	<li>Other industrial odor challenges</li>
 </ul>',
-			'text_tr' => '<p>Fabrikalarda kötü kokuların kontrol edilememesi para cezalarına sebep olmanın yanı sıra çalışanların sağlığını da olumsuz etkileyebilir. Astım, cilt tahrişi ve solunum güçlüğü gibi sorunlara neden olabilir.</p>
+            'text_tr' => '<p>Fabrikalarda kötü kokuların kontrol edilememesi para cezalarına sebep olmanın yanı sıra çalışanların sağlığını da olumsuz etkileyebilir. Astım, cilt tahrişi ve solunum güçlüğü gibi sorunlara neden olabilir.</p>
 
 <p>Kötü kokuları engellemek için bazı işletmeler maskeleme çözümlerine başvurmaktadır. Fakat bu çözümler pek de uygun değildir. Çünkü maskeleme yönteminde kötü koku molekülleri ortadan kaldırılmaz sadece daha güçlü bir koku ile bastırılarak hissedilmemeleri sağlanır. Bu nedenle, daha güvenilir bir çözüm arıyorsanız, koku kontrolü için nötralizasyon yapan sisleme sistemlerine yatırım yapmayı düşünmek daha akıllı bir çözümdür. Bu çözümler sadece düşük maliyetli değil, aynı zamanda çok daha fazla etkilidir.</p>
 
@@ -39,7 +38,7 @@ class ApplicationSeeder extends Seeder
 <li>Atık geri dönüşümü</li>
 <li>Hayvan atıklarının mikrobiyal ayrışması</li>
 <li>Diğer endüstriyel kokular</li>',
-			'text_ru' => '<p>Неспособность контролировать неприятные запахи на заводах может отрицательно сказаться на здоровье сотрудников, а также привести к штрафам СЭС. Это может вызвать проблемы со здоровьем, такие как астма, раздражение кожи и затрудненное дыхание.
+            'text_ru' => '<p>Неспособность контролировать неприятные запахи на заводах может отрицательно сказаться на здоровье сотрудников, а также привести к штрафам СЭС. Это может вызвать проблемы со здоровьем, такие как астма, раздражение кожи и затрудненное дыхание.
 
 <p>Для предотвращения неприятных запахов некоторые фабрики применяют маскирующие растворы. Но эти решения не очень помогают. Поскольку при этом способе молекулы неприятного запаха не удаляются, подавляется только наиболее сильный запах, так что в целом он не ощущается. Но если вы ищете более надежное решение, разумнее рассмотреть возможность инвестирования в системы химического туманообразования с нейтрализатором. Эти решения не только экономичны, но и намного эффективнее.
 
@@ -53,14 +52,14 @@ class ApplicationSeeder extends Seeder
 	<li>Микробиологическое разложение отходов животноводства</li>
 	<li>Другие проблемы с промышленным запахом</li>
 </ul>',
-			'img' => '',
-			'doc' => '',
-		],
-		[
-			'title_en' => 'Ultrafine bubble (ufb) flotation and gas integration to liquids system',
-			'title_tr' => 'Ultra fine bubble (ufb) flotasyon ve sivilara gaz enjeksi̇yonu si̇stemi̇',
-			'title_ru' => 'Ультратонкая пузырьковая (ufb) система флотации и впрыска газа в жидкости',
-			'text_en' => '<p>Ultrafine bubble system (UFB) is a micro size gas bubble system in which gas bubbles (can be air, oxygen, ozone, nitrogen, carbon dioxide or any other gas) with diameters ranging from 5-50 microns are formed in water, sticking to each other without any spaces among them. UFB system is used in the fields of improved flotation in waste water treatment systems, increasing aeration efficiency and reducing costs in seafood production, reducing operational costs by increasing washing and cleaning performances in food and metal industries, increasing the growth rates and yields of vegetables and fruits and also improving hygienic conditions in agricultural areas.<p>
+            'img' => '',
+            'doc' => '',
+        ],
+        [
+            'title_en' => 'Ultrafine bubble (ufb) flotation and gas integration to liquids system',
+            'title_tr' => 'Ultra fine bubble (ufb) flotasyon ve sivilara gaz enjeksi̇yonu si̇stemi̇',
+            'title_ru' => 'Ультратонкая пузырьковая (ufb) система флотации и впрыска газа в жидкости',
+            'text_en' => '<p>Ultrafine bubble system (UFB) is a micro size gas bubble system in which gas bubbles (can be air, oxygen, ozone, nitrogen, carbon dioxide or any other gas) with diameters ranging from 5-50 microns are formed in water, sticking to each other without any spaces among them. UFB system is used in the fields of improved flotation in waste water treatment systems, increasing aeration efficiency and reducing costs in seafood production, reducing operational costs by increasing washing and cleaning performances in food and metal industries, increasing the growth rates and yields of vegetables and fruits and also improving hygienic conditions in agricultural areas.<p>
 
 <p>In waste water applications UFB system is mostly used in PHYSICAL AND CHEMICAL PRETREATMENT, BIOLOGICAL TREATMENT and TERTIARY TREATMENT areas.<p>
 
@@ -94,7 +93,7 @@ class ApplicationSeeder extends Seeder
 </ul>
 
 <p><small>*Specific Energy Consumption = energy used to produce air needed in flotation.</small></p>',
-			'text_tr' => '<p>Ultrafine bubble sistemi (UFB) çapları 5-50 mikron arasında değişen gaz (hava, oksijen, ozon, nitrojen, karbondioksit veya herhangi başka bir gaz olabilir) kabarcıklarının su içerisinde birbirine yapışık ve aralarında hiç boşluk kalmayacak şekilde oluşturulduğu bir mikro gaz kabarcığı sistemi olup; atık su arıtma sistemlerinde iyileştirilmiş flotasyon, deniz mahsülleri üretiminde havalandırma veriminin arttırılması ve masrafların azaltılması , gıda ve metal endüstrilerinde yıkama ve temizlik performanslarının arttırılarak işletme maliyetlerinin düşürülmesi ve tarımsal alanda ise sebze ve meyvelerin büyüme hızlarının ve verimlerinin arttırılması ve hijyenik koşullarının iyileştirilmesi alanlarında kullanılmaktadır.</p>
+            'text_tr' => '<p>Ultrafine bubble sistemi (UFB) çapları 5-50 mikron arasında değişen gaz (hava, oksijen, ozon, nitrojen, karbondioksit veya herhangi başka bir gaz olabilir) kabarcıklarının su içerisinde birbirine yapışık ve aralarında hiç boşluk kalmayacak şekilde oluşturulduğu bir mikro gaz kabarcığı sistemi olup; atık su arıtma sistemlerinde iyileştirilmiş flotasyon, deniz mahsülleri üretiminde havalandırma veriminin arttırılması ve masrafların azaltılması , gıda ve metal endüstrilerinde yıkama ve temizlik performanslarının arttırılarak işletme maliyetlerinin düşürülmesi ve tarımsal alanda ise sebze ve meyvelerin büyüme hızlarının ve verimlerinin arttırılması ve hijyenik koşullarının iyileştirilmesi alanlarında kullanılmaktadır.</p>
 
 <p>Atık su arıtma sistemlerinde FİZİKSEL VE KİMYASAL ÖN ARITMA, BİYOLOJİK ARITMA ve NİHAİ ARITMA kısımlarında kullanılmaktadır.</p>
 
@@ -128,7 +127,7 @@ class ApplicationSeeder extends Seeder
 </ul>
 
 <p><small>*Spesifik Enerji tüketimi = Flotasyonu sağlamak için kullanılan havanın üretimi için tüketilen enerji.</small></p>',
-			'text_ru' => '<p>Ультратонкая пузырьковая система (UFB) представляет собой газовую пузырьковую систему микроразмерности, в которой газовые пузырьки (могут быть воздухом, кислородом, озоном, азотом, двуокисью углерода или любым другим газом) диаметром от 5-50 микрон образуются в воде, прилипая друг к другу без каких-либо промежутков между ними. Система UFB используется для улучшения флотации в системах очистки сточных вод, повышения эффективности аэрации и снижения затрат при производстве морепродуктов, снижения эксплуатационных расходов за счет повышения эффективности мойки и очистки в пищевой и металлургической промышленности, увеличения темпов роста и урожайности овощей и фруктов, а также улучшения гигиенических условий в сельскохозяйственных районах.</p>
+            'text_ru' => '<p>Ультратонкая пузырьковая система (UFB) представляет собой газовую пузырьковую систему микроразмерности, в которой газовые пузырьки (могут быть воздухом, кислородом, озоном, азотом, двуокисью углерода или любым другим газом) диаметром от 5-50 микрон образуются в воде, прилипая друг к другу без каких-либо промежутков между ними. Система UFB используется для улучшения флотации в системах очистки сточных вод, повышения эффективности аэрации и снижения затрат при производстве морепродуктов, снижения эксплуатационных расходов за счет повышения эффективности мойки и очистки в пищевой и металлургической промышленности, увеличения темпов роста и урожайности овощей и фруктов, а также улучшения гигиенических условий в сельскохозяйственных районах.</p>
 
 <p>В системах очистки сточных вод система UFB в основном используется в областях ФИЗИЧЕСКОЙ И ХИМИЧЕСКОЙ ПРЕДВАРИТЕЛЬНОЙ ОБРАБОТКИ, БИОЛОГИЧЕСКОЙ ОЧИСТКИ и ДООЧИСТКИ.</p>
 
@@ -162,14 +161,14 @@ class ApplicationSeeder extends Seeder
 </ul>
 
 <p><small>* Удельное потребление энергии = энергия, используемая для производства воздуха, необходимого при флотации.<small></p>',
-			'img' => '',
-			'doc' => '',
-		],
-		[
-			'title_en' => 'Cooling water chemical treatment',
-			'title_tr' => 'Soğutma suyu ki̇myasal şartlandirmasi',
-			'title_ru' => 'Химическое кондиционирование охлаждающей жидкости',
-			'text_en' => '<ul>
+            'img' => '',
+            'doc' => '',
+        ],
+        [
+            'title_en' => 'Cooling water chemical treatment',
+            'title_tr' => 'Soğutma suyu ki̇myasal şartlandirmasi',
+            'title_ru' => 'Химическое кондиционирование охлаждающей жидкости',
+            'text_en' => '<ul>
 	<li>Scale inhibition in open and semi open cooling systems</li>
 	<li>Corrosion inhibition in open and semi open cooling systems</li>
 	<li>Microbiological activation prevention in open and semi open cooling water systems. (biocides)</li>
@@ -177,7 +176,7 @@ class ApplicationSeeder extends Seeder
 	<li>Microbiological activation inhibition closed loop cooling (etc chiller systems) water systems (biocides)</li>
 	<li>Microbiological activation, scaling and corrosion inhibition in once through (etc sea water cooling) cooling water systems.</li>
 </ul>',
-			'text_tr' => '<ul>
+            'text_tr' => '<ul>
 	<li>Açık ve yarı açık soğuma sistemleri birikinti önleme</li>
 	<li>Açık ve yarı açık soğutma sistemleri korozyon önleme</li>
 	<li>Açık ve yarı açık soğutma sistemeleri biyolojik aktivasyon önleme. (biositler)</li>
@@ -186,7 +185,7 @@ class ApplicationSeeder extends Seeder
 	<li>Tek geçişli sistemler (deniz suyu soğutma vb) biyolojik aktivasyon ve korozyon ve birikinti önleme.</li>	
 </ul>
 ',
-			'text_ru' => '<ul>
+            'text_ru' => '<ul>
 	<li>Ингибирование образования накипи в открытых и полуоткрытых системах охлаждения</li>
 	<li>Ингибирование коррозии в открытых и полуоткрытых системах охлаждения</li>
 	<li>Предотвращение микробиологической активации в открытых и полуоткрытых системах водяного охлаждения (биоциды) </li>
@@ -194,42 +193,42 @@ class ApplicationSeeder extends Seeder
 	<li>Ингибирование микробиологической активации, системы охлаждения с замкнутым контуром (чиллерные системы, биоциды)</li>
 	<li>Микробиологическая активация, ингибирование образования накипи и коррозии в прямоточных (и т. д. охлаждение морской водой) системах водяного охлаждения</li>
 </ul>',
-			'img' => '',
-			'doc' => '',
-		],
-		[
-			'title_en' => 'Chemical treatment for raw water preparation and waste water',
-			'title_tr' => 'Su hazirlama ve artik su geri̇ kazanim si̇stemleri̇ ki̇myasal şartlandirmasi',
-			'title_ru' => 'Химическое кондиционирование систем подготовки воды и восстановления остаточной воды',
-			'text_en' => '<ul>
+            'img' => '',
+            'doc' => '',
+        ],
+        [
+            'title_en' => 'Chemical treatment for raw water preparation and waste water',
+            'title_tr' => 'Su hazirlama ve artik su geri̇ kazanim si̇stemleri̇ ki̇myasal şartlandirmasi',
+            'title_ru' => 'Химическое кондиционирование систем подготовки воды и восстановления остаточной воды',
+            'text_en' => '<ul>
 	<li>Filter aid chemicals for filtration systems. </li>
 	<li>Coagulants and flocculants for raw water PREPERATION systems.</li>
 	<li>Antiscalants and antifoulants for Ultrafiltration, Nano filtration, and Reverse Osmosis systems.</li>
 	<li>Microbiological fouling inhibition chemicals for Ultrafiltration, Nanofiltration and Reverse Osmosis units</li>
 	<li>Membrane cleaning chemicals for Ultrafiltrationi Nanofiltration and Reverse Osmosis units.</li>
 </ul>',
-			'text_tr' => '<ul>
+            'text_tr' => '<ul>
 	<li>Filtrasyon üniteleri performans arttırıcı tane büyütücü ürünler.</li>
 	<li>Ham su eldesinde kullanılan koagulant ve flokulant ürünler</li>
 	<li>Ultrafiltrasyon, Nanofiltrasyon ve Revers Osmos üniteleri için birikinti önleyiciler (antiskalantlar)</li>
 	<li>Ultrafiltrasyon, Nanofiltrasyon ve Revers Osmos üniteleri için biyolojik aktivasyon engelleyiciler (biositler)</li>
 	<li>Ultrafiltrasyon, Nanofiltrasyon ve Revers Osmos üniteleri için membran temizleme ürünleri</li>
 </ul>',
-			'text_ru' => '<ul>
+            'text_ru' => '<ul>
 	<li>Химические фильтрующие вещества для систем фильтрации. </li>
 	<li>Коагулянты и флокулянты для систем ПОДГОТОВКИ сырой воды.</li>
 	<li>Антискаланты и средства против обрастания для систем ультрафильтрации, нанофильтрации и обратного осмоса.</li>
 	<li>Реагенты для подавления микробиологического обрастания для установок ультрафильтрации, нанофильтрации и обратного осмоса</li>
 	<li>Реагенты для очистки мембран для установок ультрафильтрации, нанофильтрации и обратного осмоса.</li>
 </ul>',
-			'img' => '',
-			'doc' => '',
-		],
-		[
-			'title_en' => 'Scale prevention system without chemicals',
-			'title_tr' => 'Ki̇myasalsiz ki̇reçlenme önleme si̇stemi̇',
-			'title_ru' => 'Система защиты от кальцификации без химических веществ',
-			'text_en' => '<p>Modern and environmental friendly approach to scale prevention</p>
+            'img' => '',
+            'doc' => '',
+        ],
+        [
+            'title_en' => 'Scale prevention system without chemicals',
+            'title_tr' => 'Ki̇myasalsiz ki̇reçlenme önleme si̇stemi̇',
+            'title_ru' => 'Система защиты от кальцификации без химических веществ',
+            'text_en' => '<p>Modern and environmental friendly approach to scale prevention</p>
 
 <p>Chemists spent several years developing the Advanced Crystallisation Process (ACP). The system is based on what has already been scientifically proven in numerous independent studies that Electrolytic technology is the most effective. Electrolytic systems use cathode and anode – usually zinc – to release ions into the water stream. These ions act as the seed / nucleation point to keep the hardness minerals in suspension.</p>
 
@@ -271,7 +270,7 @@ Where heated water is supplied such as </p>
 <li>Recreation places</li>
 <li>Spas</li>
 </ul>',
-			'text_tr' => '<p>Kireç Taşı Önlemede Modern ve Çevre Dostu Yaklaşım</p>
+            'text_tr' => '<p>Kireç Taşı Önlemede Modern ve Çevre Dostu Yaklaşım</p>
 
 <p>Uzun yıllar süren ArGe çalışmaları sonucunda geliştirilen İleri Kristalizasyon Prosesi (ACP)  elektrolitik teknolojiyi esas almakta olup  kireç taşı oluşumunun kimyasalsız engellenme metotları arasında en etkili metot olduğu çok sayıda bağımsız bilimsel çalışma ile kanıtlanmış durumdadır. Elektrolitik sistemler bu yöntemde suya belirli iyonları besleyebilmek için katot ve anot (genellikle çinko) bölgelerinden oluşan aparatlar kullanırlar.</p>
 
@@ -311,7 +310,7 @@ Where heated water is supplied such as </p>
 <li>Rekreasyon alanları</li>
 <li>Spalar</li>
 </ul>',
-			'text_ru' => '<p>Современный и экологически безопасный подход к предотвращению образования накипи</p>
+            'text_ru' => '<p>Современный и экологически безопасный подход к предотвращению образования накипи</p>
 
 <p>Химики потратили несколько лет на разработку усовершенствованного процесса кристаллизации (ACP). Система основана на том, что уже было научно доказано многочисленными независимыми исследованиями, что электролитическая технология является наиболее эффективной. Электролитические системы используют катод и анод — обычно цинк — для выделения ионов в поток воды. Эти ионы действуют как затравка / точка зародышеобразования, чтобы удерживать минералы твердости во взвешенном состоянии.</p>
 
@@ -353,14 +352,14 @@ Where heated water is supplied such as </p>
 <li>Места отдыха</li>
 <li>Спа</li>
 </ul>',
-			'img' => '',
-			'doc' => '',
-		],
-		[
-			'title_en' => 'Chemical and biological applications for waste water treatment systems',
-			'title_tr' => 'Atik su aritma si̇stemleri̇ şartlandirmasi i̇çi̇n ki̇myasal ve bi̇yoloji̇k uygulamalar',
-			'title_ru' => 'Химические и биологические применения для кондиционирования систем очистки сточных вод',
-			'text_en' => '<ul>
+            'img' => '',
+            'doc' => '',
+        ],
+        [
+            'title_en' => 'Chemical and biological applications for waste water treatment systems',
+            'title_tr' => 'Atik su aritma si̇stemleri̇ şartlandirmasi i̇çi̇n ki̇myasal ve bi̇yoloji̇k uygulamalar',
+            'title_ru' => 'Химические и биологические применения для кондиционирования систем очистки сточных вод',
+            'text_en' => '<ul>
 	<li>Coagulants and emulsion breakers for chemical waste water treatment (both organic and inorganic based)</li>
 	<li>Chemical and biological treatment flocculants (granul or liquid based)</li>
 	<li>Antifoams and defoamers for chemical and biological waste water treatment systems.</li>
@@ -369,7 +368,7 @@ Where heated water is supplied such as </p>
 	<li>Heavy metal, sukphate and phosphate removal from waste waters.</li>
 	<li>Oil and Grease, metal, acid and kicaustic reuse applications and systems.</li>
 <ul>',
-			'text_tr' => '<ul>
+            'text_tr' => '<ul>
 	<li>Kimyasal arıtma koagulantları ve emülsiyon kırıcıları (organik ve inorganik kökenli)</li>
 	<li>Kimyasal veya biyolojik arıtma flokulant polimerleri (sıvı veya toz)</li>
 	<li>Kimyasal veya biyolojik arıtma köpük kesicileri</li>
@@ -378,7 +377,7 @@ Where heated water is supplied such as </p>
 	<li>Atık suda ağır metal, sülfat, fosfat giderimi uygulamaları</li>
 	<li>Atık sudan yağ, metal ve asit geri kazanımı uygulamaları</li>
 </ul>',
-			'text_ru' => '<ul>
+            'text_ru' => '<ul>
 	<li>Коагулянты и деэмульгаторы для химической очистки сточных вод (как на органической, так и на неорганической основе)</li>
 	<li>Флокулянты для химической и биологической обработки (гранульные или жидкие)</li>
 	<li>Пеногасители и пеногасители для систем химической и биологической очистки сточных вод.</li>
@@ -387,20 +386,18 @@ Where heated water is supplied such as </p>
 	<li>Удаление тяжелых металлов, сульфатов и фосфатов из сточных вод.</li>
 	<li>Применения и системы для повторного использования масел и жиров, металлов, кислот и щелочей.</li>
 <ul>',
-			'img' => '',
-			'doc' => '',
-		],
-	];
+            'img' => '',
+            'doc' => '',
+        ],
+    ];
 
-	/**
-	 * Run the database seeds.
-	 */
-	public function run(): void
-	{
-		foreach( $this->items as $item ) {
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+        foreach ($this->items as $item) {
             DB::table('applications')->insert($item);
         }
-	}
+    }
 }
-
-

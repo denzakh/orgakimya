@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Post;
-use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
@@ -11,9 +11,8 @@ class PostController extends Controller
         return view('posts.index', ['posts' => Post::all()]);
     }
 
-
     public function show(string $id)
     {
-      return view('posts.show', ['post' => Post::findOrFail($id)]);
+        return view('posts.show', ['post' => Post::findOrFail($id)]);
     }
 }

@@ -1,25 +1,21 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PostController;
-use App\Http\Controllers\ServiceController;
-use App\Http\Controllers\ApplicationController;
-use App\Http\Controllers\ArticleController;
-use App\Http\Controllers\PartnerController;
-use App\Http\Controllers\SettingController;
 use App\Http\Controllers\AboutController;
-use App\Http\Controllers\ContactController;
-
-use App\Http\Controllers\Admin\IndexAdminController;
-use App\Http\Controllers\Admin\PostAdminController;
-use App\Http\Controllers\Admin\ServiceAdminController;
 use App\Http\Controllers\Admin\ApplicationAdminController;
 use App\Http\Controllers\Admin\ArticleAdminController;
+use App\Http\Controllers\Admin\IndexAdminController;
 use App\Http\Controllers\Admin\PartnerAdminController;
+use App\Http\Controllers\Admin\PostAdminController;
+use App\Http\Controllers\Admin\ServiceAdminController;
 use App\Http\Controllers\Admin\SettingAdminController;
-
 use App\Http\Controllers\Admin\UploadImageController;
+use App\Http\Controllers\ApplicationController;
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ServiceController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,69 +29,55 @@ use App\Http\Controllers\Admin\UploadImageController;
 */
 
 Route::group([
-	'prefix' => LaravelLocalization::setLocale(),
-	'middleware' => [ 'localize' ]], 
-	function () {
+    'prefix' => LaravelLocalization::setLocale(),
+    'middleware' => ['localize']],
+    function () {
+        /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
+        Route::get('/', function () {
+            return View::make('welcome');
+        });
 
-		/** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
-		Route::get('/', function()
-		{
-			return View::make('welcome');
-		});    	
+        Route::get(LaravelLocalization::transRoute('routes.about'), [AboutController::class, 'index']);
 
-		Route::get(LaravelLocalization::transRoute('routes.about'), [AboutController::class, 'index']);
+        Route::get(LaravelLocalization::transRoute('routes.services'), [ServiceController::class, 'index']);
+        // Route::get(LaravelLocalization::transRoute('routes.services').'/{id}', [ServiceController::class, 'show']);
 
-		Route::get(LaravelLocalization::transRoute('routes.services'), [ServiceController::class, 'index']);
-		// Route::get(LaravelLocalization::transRoute('routes.services').'/{id}', [ServiceController::class, 'show']);
+        Route::get(LaravelLocalization::transRoute('routes.applications'), [ApplicationController::class, 'index']);
+        Route::get(LaravelLocalization::transRoute('routes.applications').'/{id}', [ApplicationController::class, 'show']);
 
-		Route::get(LaravelLocalization::transRoute('routes.applications'), [ApplicationController::class, 'index']);
-		Route::get(LaravelLocalization::transRoute('routes.applications').'/{id}', [ApplicationController::class, 'show']);
+        Route::get(LaravelLocalization::transRoute('routes.posts'), [PostController::class, 'index']);
+        Route::get(LaravelLocalization::transRoute('routes.posts').'/{id}', [PostController::class, 'show']);
 
-		Route::get(LaravelLocalization::transRoute('routes.posts'), [PostController::class, 'index']);
-		Route::get(LaravelLocalization::transRoute('routes.posts').'/{id}', [PostController::class, 'show']);
+        Route::get(LaravelLocalization::transRoute('routes.articles'), [ArticleController::class, 'index']);
+        Route::get(LaravelLocalization::transRoute('routes.articles').'/{id}', [ArticleController::class, 'show']);
 
-		Route::get(LaravelLocalization::transRoute('routes.articles'), [ArticleController::class, 'index']);
-		Route::get(LaravelLocalization::transRoute('routes.articles').'/{id}', [ArticleController::class, 'show']);
+        Route::get(LaravelLocalization::transRoute('routes.contacts'), [ContactController::class, 'index']);
 
-		Route::get(LaravelLocalization::transRoute('routes.contacts'), [ContactController::class, 'index']);
-
-	//,...
-});
-
-
-
+        //,...
+    });
 
 Route::get('/', function () {
-	return view('welcome');
+    return view('welcome');
 });
-
 
 Route::prefix('admin')->group(function () {
-	Route::get('/', [IndexAdminController::class, 'index']);
+    Route::get('/', [IndexAdminController::class, 'index']);
 
-	Route::resource('services', ServiceAdminController::class);
-	Route::resource('applications', ApplicationAdminController::class);
-	Route::resource('posts', PostAdminController::class);
-	Route::resource('articles', ArticleAdminController::class);
-	Route::resource('partners', PartnerAdminController::class);
-	Route::resource('settings', SettingAdminController::class);
- 
-	Route::get('upload-image', [UploadImageController::class, 'index']);
-	Route::post('save', [UploadImageController::class, 'save']);
+    Route::resource('services', ServiceAdminController::class);
+    Route::resource('applications', ApplicationAdminController::class);
+    Route::resource('posts', PostAdminController::class);
+    Route::resource('articles', ArticleAdminController::class);
+    Route::resource('partners', PartnerAdminController::class);
+    Route::resource('settings', SettingAdminController::class);
 
+    Route::get('upload-image', [UploadImageController::class, 'index']);
+    Route::post('save', [UploadImageController::class, 'save']);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-
-
-
-
 Route::middleware('auth')->group(function () {
-	Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-	Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-	Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-
-
-
 
 require __DIR__.'/auth.php';

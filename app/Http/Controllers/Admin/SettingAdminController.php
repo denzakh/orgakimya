@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Setting;
-use Illuminate\Http\Request;
 
 class SettingAdminController extends Controller
 {
@@ -20,7 +19,6 @@ class SettingAdminController extends Controller
      */
     public function update(UpdateSettingRequest $request, Setting $setting)
     {
-
         $service->update($request);
 
         return redirect()->route('settings.index')->with('success', 'services updated successfully');

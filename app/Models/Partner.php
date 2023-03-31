@@ -10,7 +10,7 @@ class Partner extends Model
     use HasFactory;
 
     protected $fillable = [
-		'title',
+        'title',
         'img',
     ];
 }

@@ -1,10 +1,8 @@
 <?php
 
-if (!function_exists('create_sized_images')) {
-
+if (! function_exists('create_sized_images')) {
     function create_sized_images($outOptions)
     {
-
         $defaultOptions = [
             'files' => [],
             'sizes' => [
@@ -18,46 +16,41 @@ if (!function_exists('create_sized_images')) {
 
         $options = array_merge($defaultOptions, $outOptions);
 
-        $publicPath = Storage::path('/public/images/' . $options['catalog'] . '/');
-        $urlPath = '/storage/images/' . $options['catalog'] . '/';
+        $publicPath = Storage::path('/public/images/'.$options['catalog'].'/');
+        $urlPath = '/storage/images/'.$options['catalog'].'/';
         $quality = $options['quality'];
         $isWebp = $options['isWebp'];
         $result = [];
 
-
         if ($options['files']) {
-
             foreach ($options['files'] as $fileObj) {
-
                 $originalExtension = $fileObj->getClientOriginalExtension();
-                $newFilename =  time();
+                $newFilename = time();
 
                 //Сохраняем оригинальную картинку
-                $fileObj->move($publicPath . 'origin/', $newFilename . '.' . $originalExtension);
+                $fileObj->move($publicPath.'origin/', $newFilename.'.'.$originalExtension);
 
                 $resultFile = [
                     'title' => $newFilename,
                     'ext' => $originalExtension,
-                    'original' => $urlPath . 'original/' . $newFilename . '.' . $originalExtension,
+                    'original' => $urlPath.'original/'.$newFilename.'.'.$originalExtension,
                 ];
 
                 if ($options['sizes']) {
-
                     foreach ($options['sizes'] as $sizeKey => $sizeValue) {
-
                         //Создаем обычный вариант
-                        $img = Image::make($publicPath . 'origin/' . $newFilename . '.' . $originalExtension);
-                        $absPathToSizeFile = $publicPath . $sizeKey . '/' . $newFilename . '.' . $originalExtension;
+                        $img = Image::make($publicPath.'origin/'.$newFilename.'.'.$originalExtension);
+                        $absPathToSizeFile = $publicPath.$sizeKey.'/'.$newFilename.'.'.$originalExtension;
                         $img->fit($sizeValue, $sizeValue); // обрезаем до
                         $img->save($absPathToSizeFile, $quality);
-                        $resultFile[$sizeKey] = [$urlPath . $sizeKey . '/' . $newFilename . '.' . $originalExtension];
+                        $resultFile[$sizeKey] = [$urlPath.$sizeKey.'/'.$newFilename.'.'.$originalExtension];
 
                         // webp
                         if ($isWebp) {
                             $imgWebp = $img->encode('webp', $quality);
-                            $absPathToSizeFileWebp = $publicPath . $sizeKey . '/' . $newFilename . '.webp';
+                            $absPathToSizeFileWebp = $publicPath.$sizeKey.'/'.$newFilename.'.webp';
                             $imgWebp->save($absPathToSizeFileWebp);
-                            array_push($resultFile[$sizeKey], $urlPath . $sizeKey . '/' . $newFilename . '.webp');
+                            array_push($resultFile[$sizeKey], $urlPath.$sizeKey.'/'.$newFilename.'.webp');
                         }
                     }
                 }
@@ -70,27 +63,23 @@ if (!function_exists('create_sized_images')) {
     }
 }
 
-
-if (!function_exists('get_picture_th')) {
-
+if (! function_exists('get_picture_th')) {
     function get_picture_th($cat, $img, $exe = 'jpg')
     {
-        $path = '/storage/images/' . $cat;
+        $path = '/storage/images/'.$cat;
 
-        $str =  '<picture>';
-        $str .= '<source type="image/webp" srcset="' . $path . $img . '.webp">';
-        $str .= '<img src="' . $path . $img . '.' . $exe . '" alt="">';
+        $str = '<picture>';
+        $str .= '<source type="image/webp" srcset="'.$path.$img.'.webp">';
+        $str .= '<img src="'.$path.$img.'.'.$exe.'" alt="">';
         $str .= '</picture>';
 
         return $str;
     }
 }
 
-if (!function_exists('save_doc_helper')) {
-
+if (! function_exists('save_doc_helper')) {
     function save_doc_helper($outOptions)
     {
-
         $defaultOptions = [
             'files' => [],
             'catalog' => 'shared',
@@ -98,25 +87,22 @@ if (!function_exists('save_doc_helper')) {
 
         $options = array_merge($defaultOptions, $outOptions);
 
-        $publicPath = Storage::path('/public/docs/' . $options['catalog'] . '/');
-        $urlPath = '/storage/docs/' . $options['catalog'] . '/';
+        $publicPath = Storage::path('/public/docs/'.$options['catalog'].'/');
+        $urlPath = '/storage/docs/'.$options['catalog'].'/';
         $result = [];
 
-
         if ($options['files']) {
-
             foreach ($options['files'] as $fileObj) {
-
                 $originalExtension = $fileObj->getClientOriginalExtension();
-                $newFilename =  time();
+                $newFilename = time();
 
                 //Сохраняем оригинальную картинку
-                $fileObj->move($publicPath, $newFilename . '.' . $originalExtension);
+                $fileObj->move($publicPath, $newFilename.'.'.$originalExtension);
 
                 $resultFile = [
                     'title' => $newFilename,
                     'ext' => $originalExtension,
-                    'url' => $urlPath . 'original/' . $newFilename . '.' . $originalExtension,
+                    'url' => $urlPath.'original/'.$newFilename.'.'.$originalExtension,
                 ];
 
                 array_push($result, $resultFile);

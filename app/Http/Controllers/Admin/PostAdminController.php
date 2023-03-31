@@ -63,7 +63,6 @@ class PostAdminController extends Controller
 
     private function getAllData(Request $request)
     {
-
         $data = $request->all();
 
         if ($data['file-img']) {
