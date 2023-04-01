@@ -1,13 +1,8 @@
 @php 
-	$isActive = LaravelLocalization::localizeUrl($item['url']) === url()->current();
+	$isActive = LaravelLocalization::localizeUrl($item['url']) === url()->current() ? 'is-active' : '';
 @endphp 
-
-
-<x-nav-link 
-    :href="LaravelLocalization::localizeUrl($item['url'])" 
-    :active="$isActive"
+<a class="nav__item {{$isActive}}"
+    href="{{LaravelLocalization::localizeUrl($item['url'])}}" 
 >
-    {{ __($item['title']) }}
-
-    {{ request()->routeIs(LaravelLocalization::localizeUrl($item['url']))  }}
-</x-nav-link>
+	<span class="nav__link-inner">{{ __($item['title']) }}</span>
+</a>

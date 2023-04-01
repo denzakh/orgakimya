@@ -96,7 +96,7 @@ switch (LaravelLocalization::getCurrentLocale()) {
 }
 @endphp
 
-
+<h2></h2>
 
 @forelse ($partners as $partner)
     <div style="display: inline-block; vertical-align: top; width: 200px; margin-right: 50px; margin-bottom: 50px;">
