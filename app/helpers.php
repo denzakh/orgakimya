@@ -137,20 +137,6 @@ if (! function_exists('create_sized_images')) {
     }
 }
 
-if (! function_exists('get_picture_th')) {
-    function get_picture_th($cat, $img, $exe = 'jpg')
-    {
-        $path = '/storage/images/'.$cat;
-
-        $str = '<picture>';
-        $str .= '<source type="image/webp" srcset="'.$path.$img.'.webp">';
-        $str .= '<img src="'.$path.$img.'.'.$exe.'" alt="">';
-        $str .= '</picture>';
-
-        return $str;
-    }
-}
-
 if (! function_exists('save_doc_helper')) {
     function save_doc_helper($outOptions)
     {
@@ -184,5 +170,46 @@ if (! function_exists('save_doc_helper')) {
         }
 
         return $result;
+    }
+}
+
+
+if (! function_exists('get_picture_th')) {
+    function get_picture_th($cat, $img, $exe = 'jpg')
+    {
+        $path = '/storage/images/'.$cat;
+
+        $str = '<picture>';
+        $str .= '<source type="image/webp" srcset="'.$path.$img.'.webp">';
+        $str .= '<img src="'.$path.$img.'.'.$exe.'" alt="">';
+        $str .= '</picture>';
+
+        return $str;
+    }
+}
+
+if (! function_exists('get_picture_ad')) {
+    function get_picture_ad($cat, $img, $sizes = [], $exe = 'jpg')
+    {
+
+        $catalogPath = '/storage/images/'.$cat.'/';
+        $str = '<picture>';
+
+        if($sizes) {
+            foreach ($sizes as $sizeKey => $sizeValue) {
+                $path = $catalogPath.$sizeKey.'/';
+                $str .= '<source type="image/webp" srcset="'.$path.$img.'.webp" media="(min-width: '.$sizeValue.'px)">';
+                $str .= '<source srcset="'.$catalogPath.$img.'.'.$exe.'" media="(min-width: '.$sizeValue.'px)">';
+            }
+                $str .= '<source type="image/webp" srcset="'.$path.$img.'.webp">';
+                $str .= '<img src="'.$catalogPath.$img.'.'.$exe.'" alt="">';            
+        } else {
+            $str .= '<source type="image/webp" srcset="'.$path.$img.'.webp">';
+            $str .= '<img src="'.$catalogPath.$img.'.'.$exe.'" alt="">';
+        }
+
+        $str .= '</picture>';
+
+        return $str;
     }
 }
