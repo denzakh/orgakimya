@@ -175,13 +175,27 @@ if (! function_exists('save_doc_helper')) {
 
 
 if (! function_exists('get_picture_th')) {
-    function get_picture_th($cat, $img, $exe = 'jpg')
+    function get_picture_th($outOptions)
     {
-        $path = '/storage/images/'.$cat;
+
+        $defaultOptions = [
+            'catalog' => 'design',
+            'img' => '',
+            'exe' => 'jpg',
+            'isLazy' => true,
+            'alt' => ''
+        ];
+
+        $options = array_merge($defaultOptions, $outOptions);
+
+        $catalogPath = '/storage/images/'.$options['catalog'].'/';
+        $lazy = $options['exe'] ?? 'loading="lazy"';
+        $img = $options['img'];
+        $exe = $options['exe'];
 
         $str = '<picture>';
-        $str .= '<source type="image/webp" srcset="'.$path.$img.'.webp">';
-        $str .= '<img src="'.$path.$img.'.'.$exe.'" alt="">';
+        $str .= '<source type="image/webp" srcset="'.$catalogPath.$img.'.webp">';
+        $str .= '<img src="'.$catalogPath.$img.'.'.$exe.'" '.$lazy.' alt="'.$options['alt'].'">';
         $str .= '</picture>';
 
         return $str;
@@ -189,23 +203,37 @@ if (! function_exists('get_picture_th')) {
 }
 
 if (! function_exists('get_picture_ad')) {
-    function get_picture_ad($cat, $img, $sizes = [], $exe = 'jpg')
+    function get_picture_ad($outOptions)
     {
+        $defaultOptions = [
+            'catalog' => 'design',
+            'img' => '',
+            'sizes' => [],
+            'exe' => 'jpg',
+            'isLazy' => true,
+            'alt' => ''
+        ];
 
-        $catalogPath = '/storage/images/'.$cat.'/';
+        $options = array_merge($defaultOptions, $outOptions);
+
+        $catalogPath = '/storage/images/'.$options['catalog'].'/';
+        $lazy = $options['exe'] ?? 'loading="lazy"';
+        $img = $options['img'];
+        $exe = $options['exe'];
+
         $str = '<picture>';
 
-        if($sizes) {
-            foreach ($sizes as $sizeKey => $sizeValue) {
+        if($options['sizes']) {
+            foreach ($options['sizes'] as $sizeKey => $sizeValue) {
                 $path = $catalogPath.$sizeKey.'/';
                 $str .= '<source type="image/webp" srcset="'.$path.$img.'.webp" media="(min-width: '.$sizeValue.'px)">';
                 $str .= '<source srcset="'.$catalogPath.$img.'.'.$exe.'" media="(min-width: '.$sizeValue.'px)">';
             }
                 $str .= '<source type="image/webp" srcset="'.$path.$img.'.webp">';
-                $str .= '<img src="'.$catalogPath.$img.'.'.$exe.'" alt="">';            
+                $str .= '<img src="'.$catalogPath.$img.'.'.$exe.'" '.$lazy.' alt="'.$options['alt'].'">';            
         } else {
             $str .= '<source type="image/webp" srcset="'.$path.$img.'.webp">';
-            $str .= '<img src="'.$catalogPath.$img.'.'.$exe.'" alt="">';
+            $str .= '<img src="'.$catalogPath.$img.'.'.$exe.'" '.$lazy.' alt="'.$options['alt'].'">';
         }
 
         $str .= '</picture>';

@@ -1,7 +1,9 @@
 <x-layout>
     <div class="container">
-        <h1>{{ __('Menu: About') }}</h1>
-
+        <div class="page">
+            <div class="page__title">
+                <h1>{{ __('Menu: About') }}</h1>
+            </div>
 
 @php
 switch (LaravelLocalization::getCurrentLocale()) {
@@ -96,12 +98,16 @@ switch (LaravelLocalization::getCurrentLocale()) {
 }
 @endphp
 
-<h2></h2>
+<h2>{{ __('Our clients') }}</h2>
 
 @forelse ($partners as $partner)
     <div style="display: inline-block; vertical-align: top; width: 200px; margin-right: 50px; margin-bottom: 50px;">
 
-        {!! get_picture_th('partners/200/', $partner['img'], 'png') !!}
+        {!! get_picture_th([
+            'catalog' => 'partners/200/', 
+            'img' => $partner['img'], 
+            'exe' => 'png',
+        ]) !!}
 
 
         <div>{{ $partner->title }} </div>
@@ -109,7 +115,7 @@ switch (LaravelLocalization::getCurrentLocale()) {
 
 @empty
         @endforelse
-
-
+            <div class="page__bottom"></div>
+        </div>
     </div>
 </x-layout>

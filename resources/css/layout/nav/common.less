@@ -1,13 +1,17 @@
 // общие стили
-.nav {}
+.nav {
+	padding: 20px 0;
+	max-width: 650px;
+}
 .nav__list {
+	padding: 0;
 	margin: 0 auto;
 	display: flex;
+	justify-content: space-between;
 	align-items: center;
+	gap:  10px 10px;
 }
 .nav__item {
-	padding: 10px 20px;
-	flex-grow: 1;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -15,6 +19,6 @@
 		font-weight: bold;
 	}
 }
-.nav__inner {
-
+.nav__link-inner {
+	white-space: nowrap;
 }

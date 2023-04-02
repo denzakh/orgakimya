@@ -11,6 +11,8 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=open-sans:400,700" rel="stylesheet" />
 
+
+        @include('layouts.partials.webp')
         <!-- Scripts -->
         @vite(['resources/css/app.less', 'resources/js/app.js'])
     </head>

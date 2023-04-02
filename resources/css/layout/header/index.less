@@ -6,6 +6,11 @@
   @import 'desktop.less';
 }
 
+// коррекция десктопного варианта для широких экранов
+@media screen and (min-width: (@wide-min-width)) {
+  @import (optional) 'wide.less';
+}
+
 // таблетный вариант
 @media screen and (min-width: (@tab-min-width)) and (max-width: @tab-max-width)  {
   @import 'tab.less';
