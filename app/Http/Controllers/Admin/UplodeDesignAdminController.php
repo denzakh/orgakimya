@@ -23,8 +23,8 @@ class UplodeDesignAdminController extends Controller
     {
         $data = $request->all();
 
-        if ($data['file-img']) {
-            $fileObj = $data['file-img'];
+        if (isset($data['file-img-orig']) && $data['file-img-orig']) {
+            $fileObj = $data['file-img-orig'];
 
             $options = [
                 'files' => [$fileObj],
@@ -34,8 +34,47 @@ class UplodeDesignAdminController extends Controller
                 'quality' => 75,
             ];
 
+            create_sized_images($options);
         }
 
-        return create_sized_images($options);
+        if (isset($data['file-img-sized']) && $data['file-img-sized']) {
+            $fileObj = $data['file-img-sized'];
+
+            $options = [
+                'files' => [$fileObj],
+                'sizes' => [
+                    'wide-cr' => 1920,    
+                    'desktop-cr' => 1280,   
+                    'tab-cr' => 1100,                                                     
+                    'mob-cr' => 640,
+                ],
+                'catalog' => 'design',
+                'isWebp' => true,
+                'quality' => 75,
+            ];
+
+            create_sized_images($options);
+        }
+
+        if (isset($data['file-img-croped']) && $data['file-img-croped']) {
+            $fileObj = $data['file-img-croped'];
+
+            $options = [
+                'files' => [$fileObj],
+                'crops' => [
+                    'wide-cr' => [1920],  
+                    'desktop-cr' => [1280],   
+                    'tab-cr' => [1100],                                                       
+                    'mob-cr' => [640],
+                ],
+                'catalog' => 'design',
+                'isWebp' => true,
+                'quality' => 75,
+            ];
+
+            create_sized_images($options);
+        }
+
+        return 1;
     }
 }

@@ -19,8 +19,23 @@
     @csrf 
 
 	<div class="pt-2">
+		Save as original
 	    <div class="form-group">
-	        <input type="file" name="file-img" placeholder="">
+	        <input type="file" name="file-img-orig" placeholder="">
+	    </div>
+	</div>	
+
+	<div class="pt-2">
+		Save original and create sized image
+	    <div class="form-group">
+	        <input type="file" name="file-img-sized" placeholder="">
+	    </div>
+	</div>	
+
+	<div class="pt-2">
+		Save original and create croped image
+	    <div class="form-group">
+	        <input type="file" name="file-img-croped" placeholder="">
 	    </div>
 	</div>	
 
