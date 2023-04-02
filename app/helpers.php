@@ -27,9 +27,6 @@ if (! function_exists('create_sized_images')) {
                 $originalExtension = $fileObj->getClientOriginalExtension();
                 $newFilename = time();
 
-                //Сохраняем оригинальную картинку
-                $fileObj->move($publicPath.'origin/', $newFilename.'.'.$originalExtension);
-
                 $resultFile = [
                     'title' => $newFilename,
                     'ext' => $originalExtension,
@@ -37,6 +34,9 @@ if (! function_exists('create_sized_images')) {
                 ];
 
                 if ($options['sizes']) {
+                    //Сохраняем оригинальную картинку
+                    $fileObj->move($publicPath.'origin/', $newFilename.'.'.$originalExtension);
+
                     foreach ($options['sizes'] as $sizeKey => $sizeValue) {
                         //Создаем обычный вариант
                         $img = Image::make($publicPath.'origin/'.$newFilename.'.'.$originalExtension);
@@ -53,6 +53,21 @@ if (! function_exists('create_sized_images')) {
                             array_push($resultFile[$sizeKey], $urlPath.$sizeKey.'/'.$newFilename.'.webp');
                         }
                     }
+                } else {
+
+                    //Сохраняем оригинальную картинку
+                    $fileObj->move($publicPath.'temp/', $newFilename.'.'.$originalExtension);
+
+                    $img = Image::make($publicPath.'temp/'.$newFilename.'.'.$originalExtension);
+                    $resultFile['original'] = [$urlPath.'/'.$newFilename.'.'.$originalExtension];
+                    
+                    // webp
+                    if ($isWebp) {
+                        $imgWebp = $img->encode('webp', $quality);
+                        $absPathToSizeFileWebp = $publicPath.'/'.$newFilename.'.webp';
+                        $imgWebp->save($absPathToSizeFileWebp);
+                        array_push($resultFile['original'], $urlPath.'/'.$newFilename.'.webp');
+                    }                  
                 }
 
                 array_push($result, $resultFile);

@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\PostAdminController;
 use App\Http\Controllers\Admin\ServiceAdminController;
 use App\Http\Controllers\Admin\SettingAdminController;
 use App\Http\Controllers\Admin\UploadImageController;
+use App\Http\Controllers\Admin\UplodeDesignAdminController;
 use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ContactController;
@@ -72,8 +73,8 @@ Route::prefix('admin')->group(function () {
     Route::resource('partners', PartnerAdminController::class);
     Route::resource('settings', SettingAdminController::class);
 
-    Route::get('upload-image', [UploadImageController::class, 'index']);
-    Route::post('save', [UploadImageController::class, 'save']);
+    Route::get('design', [UplodeDesignAdminController::class, 'index'])->name('design.index');
+    Route::post('design', [UplodeDesignAdminController::class, 'save'])->name('design.save');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
