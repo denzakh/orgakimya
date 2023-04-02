@@ -344,8 +344,8 @@ return [
             'icon' => 'fas fa-fw fa-lock',
         ],
         [
-            'text' => 'Upload image',
-            'url' => 'admin/upload-image',
+            'text' => 'Upload design image',
+            'url' => 'admin/design',
             'icon' => 'fas fa-fw fa-image',
         ],
         // ['header' => 'account_settings'],

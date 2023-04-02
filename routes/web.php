@@ -8,7 +8,6 @@ use App\Http\Controllers\Admin\PartnerAdminController;
 use App\Http\Controllers\Admin\PostAdminController;
 use App\Http\Controllers\Admin\ServiceAdminController;
 use App\Http\Controllers\Admin\SettingAdminController;
-use App\Http\Controllers\Admin\UploadImageController;
 use App\Http\Controllers\Admin\UplodeDesignAdminController;
 use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\ArticleController;

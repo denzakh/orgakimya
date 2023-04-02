@@ -25,6 +25,10 @@ if (! function_exists('create_sized_images')) {
         if ($options['files']) {
             foreach ($options['files'] as $fileObj) {
                 $originalExtension = $fileObj->getClientOriginalExtension();
+                $originalNameWithExe = $fileObj->getClientOriginalName();
+                $originalName = explode( '.'.$originalExtension, $originalNameWithExe )[0];
+
+                
                 $newFilename = time();
 
                 $resultFile = [
@@ -55,18 +59,18 @@ if (! function_exists('create_sized_images')) {
                     }
                 } else {
 
-                    //Сохраняем оригинальную картинку
-                    $fileObj->move($publicPath.'temp/', $newFilename.'.'.$originalExtension);
-
-                    $img = Image::make($publicPath.'temp/'.$newFilename.'.'.$originalExtension);
-                    $resultFile['original'] = [$urlPath.'/'.$newFilename.'.'.$originalExtension];
+                    //Сохраняем оригинальную картинку c сжатием
+                    $img = Image::make($fileObj);
+                    $absPathToSizeFile = $publicPath.'/'.$originalName.'.'.$originalExtension;
+                    $img->save($absPathToSizeFile, $quality);
+                    $resultFile['original'] = [$urlPath.'/'.$originalName.'.'.$originalExtension];
                     
                     // webp
                     if ($isWebp) {
                         $imgWebp = $img->encode('webp', $quality);
-                        $absPathToSizeFileWebp = $publicPath.'/'.$newFilename.'.webp';
+                        $absPathToSizeFileWebp = $publicPath.'/'.$originalName.'.webp';
                         $imgWebp->save($absPathToSizeFileWebp);
-                        array_push($resultFile['original'], $urlPath.'/'.$newFilename.'.webp');
+                        array_push($resultFile['original'], $urlPath.'/'.$originalName.'.webp');
                     }                  
                 }
 
