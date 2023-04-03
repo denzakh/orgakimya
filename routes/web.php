@@ -35,9 +35,9 @@ Route::group([
     'middleware' => ['localize']],
     function () {
         /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
-        Route::get('/', function () {
-            return View::make('welcome');
-        });
+        // Route::get('/', function () {
+        //     return View::make('main');
+        // });
 
         Route::get(LaravelLocalization::transRoute('routes.about'), [AboutController::class, 'index']);
 
@@ -59,7 +59,7 @@ Route::group([
     });
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::prefix('admin')->group(function () {

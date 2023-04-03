@@ -2,6 +2,7 @@
 .nav {
 	padding: 20px 0;
 	max-width: 650px;
+	margin: 0 auto;
 }
 .nav__list {
 	padding: 0;
@@ -11,14 +12,22 @@
 	align-items: center;
 	gap:  10px 10px;
 }
-.nav__item {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	&.is-active {
-		font-weight: bold;
-	}
-}
 .nav__link-inner {
+	.link-basic-mono(rgba(255,255,255,0.9));
 	white-space: nowrap;
 }
+.nav__link-active {
+	color: #ffffff;
+	white-space: nowrap;
+	text-shadow: 1px 1px 10px rgba(255,255,255,0.5);
+}
+.nav__item {
+	line-height: 1.3;
+	min-height: 32px;
+	&:hover .nav__link-inner {
+		.link-basic-mono(#fedd4b);
+	}
+}
+
+
+
