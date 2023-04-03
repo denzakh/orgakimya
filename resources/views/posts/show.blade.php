@@ -5,15 +5,11 @@
         </h2>
     </x-slot>
 
-	<div>
-		<h1>{{ $post->title }}</h1>	
-		<div>
-			{{ $post->text }}
-		</div>
-	</div>
+    <div>
+        <h1>{{ $post->title }}</h1>
+        <div>
+            {{ $post->text }}
+        </div>
+    </div>
 
 </x-layout>
-
-
-
-

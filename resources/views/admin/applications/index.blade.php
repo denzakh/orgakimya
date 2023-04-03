@@ -2,16 +2,17 @@
 
 @section('title', 'Applications')
 
-@if(session('status'))
-<div class="alert alert-success">
-    {{ session('status') }}
-</div>
+@if (session('status'))
+    <div class="alert alert-success">
+        {{ session('status') }}
+    </div>
 @endif
 
 @section('content')
 
     <div class="container">
-        <a href="{{ route('applications.create') }}" class="btn btn-primary pull-right"><i class="fa fa-plus-square-o"></i> Create
+        <a href="{{ route('applications.create') }}" class="btn btn-primary pull-right"><i class="fa fa-plus-square-o"></i>
+            Create
             application</a>
 
         <table class="table table-striped">
@@ -28,7 +29,8 @@
                         <td style="min-width: 160px;">
                             <a href="{{ route('applications.edit', $application) }}" class="btn btn-success">Edit</a>
 
-                            <form action="{{ route('applications.destroy', $application->id) }}" method="Service" class="d-inline-block">
+                            <form action="{{ route('applications.destroy', $application->id) }}" method="Service"
+                                class="d-inline-block">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">Delete</button>

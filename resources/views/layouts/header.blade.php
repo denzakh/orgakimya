@@ -3,7 +3,8 @@
 	$telUrl = preg_replace('![^0-9]+!', '', $tel);
 	$email = $mdsettings['email1'];
 	$isNotHomePage = !(url()->current() === url()->to('/'));
- 
+
+	$locArr = LaravelLocalization::getSupportedLanguagesKeys();
 @endphp 
 
 <header class="header">
@@ -34,9 +35,17 @@
 				</div> -->
 
 				<div class="header__lng">
-					<button type="button" onclick="window.myDialog.show();">Просто открыть</button>
-					<button type="button" onclick="window.myDialog.showModal();">Открыть как модалку</button>
-					<dialog id="myDialog">🖖 Живи долго и процветай!</dialog>
+
+
+					<ul>
+					@foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+						<li>
+							<a rel="alternative" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+								{{ $properties['native'] }}
+							</a>
+						</li>
+					@endforeach
+					</ul>
 				</div>
 			</div>
 		</div>

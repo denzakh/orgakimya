@@ -4,11 +4,11 @@
 
 @section('content')
 
-<div class="container">
+    <div class="container">
 
-<h1>{{ $partner->title }}</h1>
+        <h1>{{ $partner->title }}</h1>
 
-{{ $partner->text }}
-</div>
+        {{ $partner->text }}
+    </div>
 
 @endsection

@@ -16,6 +16,8 @@ class SettingSeeder extends Seeder
         'address2' => 'DAP Royal Center A Blok Kat: 10 D: 45',
         'coord1' => '40.935626, 29.134579',
         'coord2' => '40.91457863679844, 29.187747369256336',
+        'gmaplink1' => 'https://goo.gl/maps/PxFNefF1YC3qxXFv7',
+        'gmaplink2' => 'https://goo.gl/maps/jU5b4u2ezVdd38WW6',
         'city' => 'İstanbul',
         'district' => 'Maltepe',
         'phone1' => '+90 216 909 88 17',

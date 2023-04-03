@@ -1,9 +1,9 @@
 @php
-	$menu = config('menu');
+    $menu = config('menu');
 @endphp
 
 <nav class="nav">
-	<ul class="nav__list">
-		@each('layouts.partials.nav-item', $menu, 'item', 'empty')
-	</ul>
+    <ul class="nav__list">
+        @each('layouts.partials.nav-item', $menu, 'item', 'empty')
+    </ul>
 </nav>

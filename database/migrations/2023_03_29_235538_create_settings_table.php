@@ -21,6 +21,8 @@ return new class extends Migration
             $table->string('address2')->nullable;
             $table->string('coord1')->nullable;
             $table->string('coord2')->nullable;
+            $table->string('gmaplink1')->nullable;
+            $table->string('gmaplink2')->nullable;
             $table->string('city')->nullable;
             $table->string('district')->nullable;
             $table->string('phone1')->nullable;

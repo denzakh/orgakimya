@@ -2,10 +2,10 @@
 
 @section('title', 'Services')
 
-@if(session('status'))
-<div class="alert alert-success">
-    {{ session('status') }}
-</div>
+@if (session('status'))
+    <div class="alert alert-success">
+        {{ session('status') }}
+    </div>
 @endif
 
 @section('content')
@@ -28,7 +28,8 @@
                         <td style="min-width: 160px;">
                             <a href="{{ route('services.edit', $service) }}" class="btn btn-success">Edit</a>
 
-                            <form action="{{ route('services.destroy', $service->id) }}" method="Service" class="d-inline-block">
+                            <form action="{{ route('services.destroy', $service->id) }}" method="Service"
+                                class="d-inline-block">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">Delete</button>

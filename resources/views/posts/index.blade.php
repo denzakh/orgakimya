@@ -1,20 +1,31 @@
 <x-layout>
     <div class="container">
-        <h1>{{ __('Menu: Posts') }}</h1>
-
-        @forelse ($posts as $post)
-            <div>
-                <h2>
-                    {{ $post->title }}
-                </h2>
-
-                <div>
-                    {{ $post->text }}
-                </div>
-
-                {!! get_picture_th('posts/thumbnail/', $post['img']) !!}
+        <div class="page">
+            <div class="page__title">
+                <h1>{{ __('Menu: Posts') }}</h1>
             </div>
-        @empty
-        @endforelse
+
+            @forelse ($posts as $post)
+                <div>
+                    <h2>
+                        {{ $post->title }}
+                    </h2>
+
+                    <div>
+                        {{ $post->text }}
+                    </div>
+
+                    {!! get_picture_th([
+                        'catalog' => 'posts/thumbnail/',
+                        'img' => $post['img'],
+                        'exe' => 'png',
+                        'alt' => $post->title,
+                    ]) !!}
+                </div>
+            @empty
+            @endforelse
+
+            <div class="page__bottom"></div>
+        </div>
     </div>
 </x-layout>

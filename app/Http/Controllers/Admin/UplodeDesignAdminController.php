@@ -43,10 +43,10 @@ class UplodeDesignAdminController extends Controller
             $options = [
                 'files' => [$fileObj],
                 'sizes' => [
-                    'wide-cr' => 1920,    
-                    'desktop-cr' => 1280,   
-                    'tab-cr' => 1100,                                                     
-                    'mob-cr' => 640,
+                    'wide-sz' => 1920,    
+                    'desktop-sz' => 1280,   
+                    'tab-sz' => 1100,                                                     
+                    'mob-sz' => 640,
                 ],
                 'catalog' => 'design',
                 'isWebp' => true,

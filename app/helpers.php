@@ -25,6 +25,9 @@ if (! function_exists('create_sized_images')) {
 
         $options = array_merge($defaultOptions, $outOptions);
 
+        // var_dump($options);
+        // die();
+
         $relativePath = '/images/'.$options['catalog'].'/';
         $publicPath = Storage::path('/public/images/'.$options['catalog'].'/');
         $urlPath = '/storage/images/'.$options['catalog'].'/';
@@ -84,7 +87,7 @@ if (! function_exists('create_sized_images')) {
 
                         // родное расширение
                         $absPathToSizeFile = $publicPathSizedFolder.'/'.$fileName.'.'.$originalExtension;
-                        $img->fit($sizeValue, $sizeValue); // пережимаем до
+                        $img->widen($sizeValue); // пережимаем до
                         $img->save($absPathToSizeFile, $quality);
                         $resultFile[$sizeKey] = [$urlPath.$sizeKey.'/'.$fileName.'.'.$originalExtension];
 
