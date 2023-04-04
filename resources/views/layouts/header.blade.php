@@ -70,8 +70,7 @@
 					</a>
 				@endif
 			</div>
-			<div class="header__nav-col">
-				<div class="header__top">
+			<div class="header__top-col">
 				<div class="header__contact">
 					<div class="header__r-item">
 						Tel: <a href="tel:+{{ $telUrl }}" class="header__tel">{{ $tel }}</a>
@@ -80,7 +79,8 @@
 						Email: <a href="mailto:{{ $email }}" class="header__email">{{ $email }}</a>
 					</div>	
 				</div>					
-				</div>
+			</div>			
+			<div class="header__nav-col">
 				@include('layouts.nav')
 			</div>
 			<div class="header__r-col">
