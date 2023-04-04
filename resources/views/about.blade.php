@@ -89,84 +89,85 @@
             @if (LaravelLocalization::getCurrentLocale() === 'en')
                 <div class="content-standart">
 
-                    <p>Orga Kimya is a custom design sustainable engineering solutions provider company. We help our
+                    <p><span class="about__firm">Orga Kimya</span> is a custom design sustainable engineering solutions provider company. We help our
                         customers to REDUCE their COSTS related to WATER & ENERGY & Maintenance and Labor etc while
                         improving efficiency of the systems in order to help our customers meet or exceed their
                         environmental, operational and financial goals.</p>
 
                 </div>
 
+                <div class="about__list-wrap">
+                    <p class="about__list-title">Our main area of proficiencies are:</p>
 
-                <p class="about__list-title">Our main area of proficiencies are:</p>
-
-                <ul class="about__list">
-                    <li class="about__item">
-                        <div class="about__item-row">
-                            <div class="about__item-icon">
-                                <svg class="about__icon-dollar">
-                                    <use href="#icon-dollar" width="50" height="50" fill=""></use>
-                                </svg>
+                    <ul class="about__list">
+                        <li class="about__item">
+                            <div class="about__item-row">
+                                <div class="about__item-icon">
+                                    <svg class="about__icon-dollar">
+                                        <use href="#icon-dollar" width="50" height="50" fill=""></use>
+                                    </svg>
+                                </div>
+                                <div class="about__item-text">Optimizing cost vs performance for existing waste water treatment plants.</div>
                             </div>
-                            <div class="about__item-text">Optimizing cost vs performance for existing waste water treatment plants.</div>
-                        </div>
-                    </li>
-                    <li class="about__item">
-                        <div class="about__item-row">
-                            <div class="about__item-icon">
-                                <svg class="about__icon-recycling">
-                                    <use href="#icon-recycling" width="100" height="100" fill=""></use>
-                                </svg>
+                        </li>
+                        <li class="about__item">
+                            <div class="about__item-row">
+                                <div class="about__item-icon">
+                                    <svg class="about__icon-recycling">
+                                        <use href="#icon-recycling" width="100" height="100" fill=""></use>
+                                    </svg>
+                                </div>
+                                <div class="about__item-text">Chemical and biological treatment and equipment solutions for
+                                    "Waste water reuse".</div>
                             </div>
-                            <div class="about__item-text">Chemical and biological treatment and equipment solutions for
-                                "Waste water reuse".</div>
-                        </div>
-                    </li>
-                    <li class="about__item">
-                        <div class="about__item-row">
-                            <div class="about__item-icon">
-                                <svg class="about__icon-snowflake">
-                                    <use href="#icon-snowflake" width="50" height="50" fill=""></use>
-                                </svg>
+                        </li>
+                        <li class="about__item">
+                            <div class="about__item-row">
+                                <div class="about__item-icon">
+                                    <svg class="about__icon-snowflake">
+                                        <use href="#icon-snowflake" width="50" height="50" fill=""></use>
+                                    </svg>
+                                </div>
+                                <div class="about__item-text">Treatment of cooling and heating water systems against the
+                                    damages caused by scaling, corrosion and microbiological growth.</div>
                             </div>
-                            <div class="about__item-text">Treatment of cooling and heating water systems against the
-                                damages caused by scaling, corrosion and microbiological growth.</div>
-                        </div>
-                    </li>
-                    <li class="about__item">
-                        <div class="about__item-row">
-                            <div class="about__item-icon">
-                                <svg class="about__icon-drop">
-                                    <use href="#icon-drop" width="60" height="60" fill=""></use>
-                                </svg>
+                        </li>
+                        <li class="about__item">
+                            <div class="about__item-row">
+                                <div class="about__item-icon">
+                                    <svg class="about__icon-drop">
+                                        <use href="#icon-drop" width="60" height="60" fill=""></use>
+                                    </svg>
+                                </div>
+                                <div class="about__item-text">Engineering solutions for raw water and recycled waste water
+                                    preperation equipments.</div>
                             </div>
-                            <div class="about__item-text">Engineering solutions for raw water and recycled waste water
-                                preperation equipments.</div>
-                        </div>
-                    </li>
-                    <li class="about__item">
-                        <div class="about__item-row">
-                            <div class="about__item-icon">
-                                <svg style="transform: rotate(90deg);" class="about__icon-smell">
-                                    <use href="#icon-smell2" width="60" height="60" fill=""></use>
-                                </svg>
+                        </li>
+                        <li class="about__item">
+                            <div class="about__item-row">
+                                <div class="about__item-icon">
+                                    <svg style="transform: rotate(90deg);" class="about__icon-smell">
+                                        <use href="#icon-smell2" width="60" height="60" fill=""></use>
+                                    </svg>
+                                </div>
+                                <div class="about__item-text">Elimination of bad odours in some spesific processes or in
+                                    waste water treatment plants with neutralization process.</div>
                             </div>
-                            <div class="about__item-text">Elimination of bad odours in some spesific processes or in
-                                waste water treatment plants with neutralization process.</div>
-                        </div>
-                    </li>
-                    <li class="about__item">
-                        <div class="about__item-row">
-                            <div class="about__item-icon">
-                                <svg class="about__icon-gear">
-                                    <use href="#icon-gear" width="50" height="50" fill=""></use>
-                                </svg>
+                        </li>
+                        <li class="about__item">
+                            <div class="about__item-row">
+                                <div class="about__item-icon">
+                                    <svg class="about__icon-gear">
+                                        <use href="#icon-gear" width="50" height="50" fill=""></use>
+                                    </svg>
+                                </div>
+                                <div class="about__item-text">Process water treatment solutions especially for fiber cement
+                                    industry, car painting processes, oil recover processes, other raw metal recovery
+                                    processes.</div>
                             </div>
-                            <div class="about__item-text">Process water treatment solutions especially for fiber cement
-                                industry, car painting processes, oil recover processes, other raw metal recovery
-                                processes.</div>
-                        </div>
-                    </li>
-                </ul>
+                        </li>
+                    </ul>                    
+                </div>
 
 
                 <div class="content-standart">
@@ -206,91 +207,102 @@
                     </p>
 
                 </div>
+
+
+
+
+
+
+
+
+
             @endif
             @if (LaravelLocalization::getCurrentLocale() === 'tr')
                 <div class="content-standart">
 
-                    <p>Orga Kimya, sürdürülebilir, doğa dostu ve özel tasarım mühendislik çözümleri sağlayan bir
+                    <p><span class="about__firm">Orga Kimya</span>, sürdürülebilir, doğa dostu ve özel tasarım mühendislik çözümleri sağlayan bir
                         firmadır. Müşterilerimizin çevresel, operasyonel ve finansal hedeflerini karşılaşmalarına ve
                         aşmalarına katkı sağlamak için ilgili sistemlerin verimliliğini artırırken SU & ENERJİ & Bakım
                         ve İşçilik vb. ile ilgili MALİYETLERİNİ AZALTMAlarına yardımcı oluyoruz.</p>
 
                 </div>
 
-                <p class="about__list-title">Başlıca uzmanlık alanlarımız:</p>
+                <div class="about__list-wrap">
+                    <p class="about__list-title">Başlıca uzmanlık alanlarımız:</p>
 
-                <ul class="about__list">
-                    <li class="about__item">
-                        <div class="about__item-row">
-                            <div class="about__item-icon">
-                                <svg class="about__icon-dollar">
-                                    <use href="#icon-dollar" width="50" height="50" fill=""></use>
-                                </svg>
+                    <ul class="about__list">
+                        <li class="about__item">
+                            <div class="about__item-row">
+                                <div class="about__item-icon">
+                                    <svg class="about__icon-dollar">
+                                        <use href="#icon-dollar" width="50" height="50" fill=""></use>
+                                    </svg>
+                                </div>
+                                <div class="about__item-text">Mevcut atık su arıtma tesisleri için maliyet ve performans
+                                    optimizasyonu.</div>
                             </div>
-                            <div class="about__item-text">Mevcut atık su arıtma tesisleri için maliyet ve performans
-                                optimizasyonu.</div>
-                        </div>
-                    </li>
-                    <li class="about__item">
-                        <div class="about__item-row">
-                            <div class="about__item-icon">
-                                <svg class="about__icon-recycling">
-                                    <use href="#icon-recycling" width="100" height="100" fill=""></use>
-                                </svg>
+                        </li>
+                        <li class="about__item">
+                            <div class="about__item-row">
+                                <div class="about__item-icon">
+                                    <svg class="about__icon-recycling">
+                                        <use href="#icon-recycling" width="100" height="100" fill=""></use>
+                                    </svg>
+                                </div>
+                                <div class="about__item-text">"Atık suların yeniden kullanımı" için kimyasal ve biyolojik
+                                    arıtma ve ekipman çözümleri.</div>
                             </div>
-                            <div class="about__item-text">"Atık suların yeniden kullanımı" için kimyasal ve biyolojik
-                                arıtma ve ekipman çözümleri.</div>
-                        </div>
-                    </li>
-                    <li class="about__item">
-                        <div class="about__item-row">
-                            <div class="about__item-icon">
-                                <svg class="about__icon-snowflake">
-                                    <use href="#icon-snowflake" width="50" height="50" fill=""></use>
-                                </svg>
+                        </li>
+                        <li class="about__item">
+                            <div class="about__item-row">
+                                <div class="about__item-icon">
+                                    <svg class="about__icon-snowflake">
+                                        <use href="#icon-snowflake" width="50" height="50" fill=""></use>
+                                    </svg>
+                                </div>
+                                <div class="about__item-text">Soğutma ve ısıtma suyu sistemlerinin kireçlenme, korozyon ve
+                                    mikrobiyolojik kirlenmeden kaynaklanan hasarlara karşı korunması.</div>
                             </div>
-                            <div class="about__item-text">Soğutma ve ısıtma suyu sistemlerinin kireçlenme, korozyon ve
-                                mikrobiyolojik kirlenmeden kaynaklanan hasarlara karşı korunması.</div>
-                        </div>
-                    </li>
-                    <li class="about__item">
-                        <div class="about__item-row">
-                            <div class="about__item-icon">
-                                <svg class="about__icon-drop">
-                                    <use href="#icon-drop" width="60" height="60" fill=""></use>
-                                </svg>
+                        </li>
+                        <li class="about__item">
+                            <div class="about__item-row">
+                                <div class="about__item-icon">
+                                    <svg class="about__icon-drop">
+                                        <use href="#icon-drop" width="60" height="60" fill=""></use>
+                                    </svg>
+                                </div>
+                                <div class="about__item-text">Ham su ve geri dönüştürülmüş atık su hazırlama ekipmanları
+                                    için mühendislik çözümleri.</div>
                             </div>
-                            <div class="about__item-text">Ham su ve geri dönüştürülmüş atık su hazırlama ekipmanları
-                                için mühendislik çözümleri.</div>
-                        </div>
-                    </li>
-                    <li class="about__item">
-                        <div class="about__item-row">
-                            <div class="about__item-icon">
-                                <svg style="transform: rotate(90deg);" class="about__icon-smell">
-                                    <use href="#icon-smell2" width="60" height="60" fill=""></use>
-                                </svg>
+                        </li>
+                        <li class="about__item">
+                            <div class="about__item-row">
+                                <div class="about__item-icon">
+                                    <svg style="transform: rotate(90deg);" class="about__icon-smell">
+                                        <use href="#icon-smell2" width="60" height="60" fill=""></use>
+                                    </svg>
+                                </div>
+                                <div class="about__item-text">Fabrikalardaki proses kaynaklı veya atık su arıtma
+                                    tesislerindeki kötü kokuların nötralizasyon proses ile ortadan kaldırılması.</div>
                             </div>
-                            <div class="about__item-text">Fabrikalardaki proses kaynaklı veya atık su arıtma
-                                tesislerindeki kötü kokuların nötralizasyon proses ile ortadan kaldırılması.</div>
-                        </div>
-                    </li>
-                    <li class="about__item">
-                        <div class="about__item-row">
-                            <div class="about__item-icon">
-                                <svg class="about__icon-gear">
-                                    <use href="#icon-gear" width="50" height="50" fill=""></use>
-                                </svg>
+                        </li>
+                        <li class="about__item">
+                            <div class="about__item-row">
+                                <div class="about__item-icon">
+                                    <svg class="about__icon-gear">
+                                        <use href="#icon-gear" width="50" height="50" fill=""></use>
+                                    </svg>
+                                </div>
+                                <div class="about__item-text">Özellikle fibercement sektörü, araba boyama prosesleri, yağ
+                                    geri kazanım prosesleri, diğer ham metal geri kazanım prosesleri için proses suyu arıtma
+                                    çözümleri.</div>
                             </div>
-                            <div class="about__item-text">Özellikle fibercement sektörü, araba boyama prosesleri, yağ
-                                geri kazanım prosesleri, diğer ham metal geri kazanım prosesleri için proses suyu arıtma
-                                çözümleri.</div>
-                        </div>
-                    </li>
-                </ul>
+                        </li>
+                    </ul>
+                </div>
+
 
                 <div class="content-standart">
-
 
                     <h2>Mi̇syonumuz</h2>
 
@@ -325,11 +337,18 @@
                         paylaşıyoruz.</p>
 
                 </div>
+
+
+
+
+
+
+
             @endif
             @if (LaravelLocalization::getCurrentLocale() === 'ru')
                 <div class="content-standart">
 
-                    <p>Orga Kimya — компания-поставщик устойчивых инженерных решений по индивидуальному проекту.
+                    <p><span class="about__firm">Orga Kimya</span> — компания-поставщик устойчивых инженерных решений по индивидуальному проекту.
                         Мы помогаем нашим клиентам <strong>снижать затраты</strong>, связанные с <strong>водой,
                             энергетикой</strong>, техническим обслуживанием, трудовыми затратами и т. д., одновременно
                         повышая эффективность систем, чтобы помочь нашим клиентам достичь свои экологические,
@@ -337,77 +356,81 @@
 
                 </div>
 
-                <p class="about__list-title">Наша специализация:</p>
+                <div class="about__list-wrap">
 
-                <ul class="about__list">
-                    <li class="about__item">
-                        <div class="about__item-row">
-                            <div class="about__item-icon">
-                                <svg class="about__icon-dollar">
-                                    <use href="#icon-dollar" width="50" height="50" fill=""></use>
-                                </svg>
+                    <p class="about__list-title">Наша специализация:</p>
+
+                    <ul class="about__list">
+                        <li class="about__item">
+                            <div class="about__item-row">
+                                <div class="about__item-icon">
+                                    <svg class="about__icon-dollar">
+                                        <use href="#icon-dollar" width="50" height="50" fill=""></use>
+                                    </svg>
+                                </div>
+                                <div class="about__item-text">Оптимизация затрат и производительности существующих
+                                    водоочистных сооружений.</div>
                             </div>
-                            <div class="about__item-text">Оптимизация затрат и производительности существующих
-                                водоочистных сооружений.</div>
-                        </div>
-                    </li>
-                    <li class="about__item">
-                        <div class="about__item-row">
-                            <div class="about__item-icon">
-                                <svg class="about__icon-recycling">
-                                    <use href="#icon-recycling" width="100" height="100" fill=""></use>
-                                </svg>
+                        </li>
+                        <li class="about__item">
+                            <div class="about__item-row">
+                                <div class="about__item-icon">
+                                    <svg class="about__icon-recycling">
+                                        <use href="#icon-recycling" width="100" height="100" fill=""></use>
+                                    </svg>
+                                </div>
+                                <div class="about__item-text">Решения по химической и биологической очистке и оборудованию
+                                    для «Повторного использования сточных вод».</div>
                             </div>
-                            <div class="about__item-text">Решения по химической и биологической очистке и оборудованию
-                                для «Повторного использования сточных вод».</div>
-                        </div>
-                    </li>
-                    <li class="about__item">
-                        <div class="about__item-row">
-                            <div class="about__item-icon">
-                                <svg class="about__icon-snowflake">
-                                    <use href="#icon-snowflake" width="50" height="50" fill=""></use>
-                                </svg>
+                        </li>
+                        <li class="about__item">
+                            <div class="about__item-row">
+                                <div class="about__item-icon">
+                                    <svg class="about__icon-snowflake">
+                                        <use href="#icon-snowflake" width="50" height="50" fill=""></use>
+                                    </svg>
+                                </div>
+                                <div class="about__item-text">Обработка систем охлаждения и отопления от повреждений,
+                                    вызванных образованием накипи, коррозией и микробиологическим ростом.</div>
                             </div>
-                            <div class="about__item-text">Обработка систем охлаждения и отопления от повреждений,
-                                вызванных образованием накипи, коррозией и микробиологическим ростом.</div>
-                        </div>
-                    </li>
-                    <li class="about__item">
-                        <div class="about__item-row">
-                            <div class="about__item-icon">
-                                <svg class="about__icon-drop">
-                                    <use href="#icon-drop" width="60" height="60" fill=""></use>
-                                </svg>
+                        </li>
+                        <li class="about__item">
+                            <div class="about__item-row">
+                                <div class="about__item-icon">
+                                    <svg class="about__icon-drop">
+                                        <use href="#icon-drop" width="60" height="60" fill=""></use>
+                                    </svg>
+                                </div>
+                                <div class="about__item-text">Инженерные решения для оборудования подготовки сырой воды и
+                                    оборотных сточных вод.</div>
                             </div>
-                            <div class="about__item-text">Инженерные решения для оборудования подготовки сырой воды и
-                                оборотных сточных вод.</div>
-                        </div>
-                    </li>
-                    <li class="about__item">
-                        <div class="about__item-row">
-                            <div class="about__item-icon">
-                                <svg style="transform: rotate(90deg);" class="about__icon-smell">
-                                    <use href="#icon-smell2" width="60" height="60" fill=""></use>
-                                </svg>
+                        </li>
+                        <li class="about__item">
+                            <div class="about__item-row">
+                                <div class="about__item-icon">
+                                    <svg style="transform: rotate(90deg);" class="about__icon-smell">
+                                        <use href="#icon-smell2" width="60" height="60" fill=""></use>
+                                    </svg>
+                                </div>
+                                <div class="about__item-text">Устранение неприятных запахов в некоторых специфических
+                                    процессах или на очистных сооружениях с процессом нейтрализации.</div>
                             </div>
-                            <div class="about__item-text">Устранение неприятных запахов в некоторых специфических
-                                процессах или на очистных сооружениях с процессом нейтрализации.</div>
-                        </div>
-                    </li>
-                    <li class="about__item">
-                        <div class="about__item-row">
-                            <div class="about__item-icon">
-                                <svg class="about__icon-gear">
-                                    <use href="#icon-gear" width="50" height="50" fill=""></use>
-                                </svg>
+                        </li>
+                        <li class="about__item">
+                            <div class="about__item-row">
+                                <div class="about__item-icon">
+                                    <svg class="about__icon-gear">
+                                        <use href="#icon-gear" width="50" height="50" fill=""></use>
+                                    </svg>
+                                </div>
+                                <div class="about__item-text">Решения для очистки технологической воды, особенно для
+                                    фиброцементной промышленности, процессов покраски автомобилей, процессов восстановления
+                                    масла, других процессов восстановления металлического сырья.</div>
                             </div>
-                            <div class="about__item-text">Решения для очистки технологической воды, особенно для
-                                фиброцементной промышленности, процессов покраски автомобилей, процессов восстановления
-                                масла, других процессов восстановления металлического сырья.</div>
-                        </div>
-                    </li>
-                </ul>
+                        </li>
+                    </ul>
+
+                </div>
 
                 <div class="content-standart">
 
