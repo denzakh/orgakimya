@@ -71,6 +71,7 @@ class ApplicationAdminController extends Controller
             $options = [
                 'files' => [$fileObj],
                 'sizes' => [
+                    'origin' => 1600,
                     'normal' => 1200,
                     'thumbnail' => 640,
                 ],

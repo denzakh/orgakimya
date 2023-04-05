@@ -9,8 +9,6 @@
 
 
 <header class="header">
-
-
 	<svg class="hidden">
         <defs>
             <symbol id="flag-en" viewBox="8 5 34 37" title="flag-en" desc="">
@@ -39,17 +37,6 @@
             </symbol>
         </defs>
     </svg>
-
-
-
-
-
-
-
-
-
-
-
 
 	<div class="header__inner">
 		<div class="header__row">

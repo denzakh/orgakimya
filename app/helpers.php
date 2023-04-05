@@ -230,8 +230,9 @@ if (! function_exists('get_picture_ad')) {
             foreach ($options['sizes'] as $sizeKey => $sizeValue) {
                 $path = $catalogPath.$sizeKey.'/';
                 $str .= '<source type="image/webp" srcset="'.$path.$img.'.webp" media="(min-width: '.$sizeValue.'px)">';
-                $str .= '<source srcset="'.$catalogPath.$img.'.'.$exe.'" media="(min-width: '.$sizeValue.'px)">';
+                $str .= '<source srcset="'.$path.$img.'.'.$exe.'" media="(min-width: '.$sizeValue.'px)">';
             }
+                $str .= '<!-- -->';
                 $str .= '<source type="image/webp" srcset="'.$path.$img.'.webp">';
                 $str .= '<img src="'.$catalogPath.$img.'.'.$exe.'" '.$lazy.' alt="'.$options['alt'].'">';            
         } else {

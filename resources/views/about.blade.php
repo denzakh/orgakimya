@@ -177,16 +177,9 @@
                     <p>For our sustainable common future; creating innovative engineering solutions that are specific to
                         customers and processes, harmless to the environment, with high water and energy efficiency.</p>
 
-                    <blockquote>
-                        The future is in the skies, in the air we breathe, and in the water we drink. Water is the most
-                        fundamental need of our nation. Every drop of water is precious. Water is a common resource that
-                        belongs to all people. We must ensure that water resources are used for the benefit of all
-                        citizens.
-                    </blockquote>
-
                     {!! get_picture_ad([
                         'catalog' => 'design',
-                        'img' => 'ataturk-fr',
+                        'img' => 'waterlevel1',
                         'sizes' => [
                             'wide-sz' => 1280,
                             'desktop-sz' => 1100,
@@ -195,11 +188,19 @@
                         ],
                         'exe' => 'jpg',
                         'isLazy' => true,
-                        'alt' => 'ataturk',
+                        'alt' => '',
                     ]) !!}
 
                     <p>To be a company that continuously improves itself, guarantees the satisfaction of all its
-                        customers with nature-friendly, value adding, innovative technologies.</p>
+                        customers with nature-friendly, value adding, innovative technologies.</p>                    
+
+                    <blockquote>
+                        The future is in the skies, in the air we breathe, and in the water we drink. Water is the most
+                        fundamental need of our nation. Every drop of water is precious. Water is a common resource that
+                        belongs to all people. We must ensure that water resources are used for the benefit of all
+                        citizens.
+                        <cite>Mustafa Kemal Ataturk</cite>
+                    </blockquote>
 
                     <h2>Our clients</h2>
 
@@ -309,15 +310,9 @@
                     <p>Sürdürülebilir ortak geleceğimiz için; müşteriye ve prosese özel, doğaya zararsız, su ve enerji
                         verimliliği yüksek ve yenilikçi mühendislik çözümleri yaratmak.</p>
 
-                    <blockquote>
-                        Gelecek gökyüzünde, soluduğumuz havada ve içtiğimiz suda. Su milletimizin en temel ihtiyacıdır.
-                        Suyun her damlası değerlidir. Su, tüm insanlara ait ortak bir kaynaktır. Su kaynaklarının tüm
-                        vatandaşların yararına kullanılmasını sağlamalıyız.
-                    </blockquote>
-
                     {!! get_picture_ad([
                         'catalog' => 'design',
-                        'img' => 'ataturk-fr',
+                        'img' => 'waterlevel1',
                         'sizes' => [
                             'wide-sz' => 1280,
                             'desktop-sz' => 1100,
@@ -326,10 +321,18 @@
                         ],
                         'exe' => 'jpg',
                         'isLazy' => true,
-                        'alt' => 'ataturk',
+                        'alt' => '',
                     ]) !!}
+
                     <p>Kendini sürekli geliştirerek doğa dostu yeni teknolojiler ile tüm müşterilerinin memnuniyetini
                         garanti altına alan ve onlara değer katan bir firma olmak.</p>
+
+                    <blockquote>
+                        Gelecek gökyüzünde, soluduğumuz havada ve içtiğimiz suda. Su milletimizin en temel ihtiyacıdır.
+                        Suyun her damlası değerlidir. Su, tüm insanlara ait ortak bir kaynaktır. Su kaynaklarının tüm
+                        vatandaşların yararına kullanılmasını sağlamalıyız.
+                        <cite>Mustafa Kemal Atatürk</cite>
+                    </blockquote>
 
                     <h2>Müşterilerimiz</h2>
 
@@ -439,17 +442,9 @@
                         для клиентов и процессов, безвредных для окружающей среды, с высокой эффективностью
                         использования воды и энергии.</p>
 
-                    <blockquote>
-                        Будущее в небе, в воздухе, которым мы дышим, и в воде, которую мы пьем. Вода – это самая
-                        основная потребность нашего народа. Каждая капля воды драгоценна. Вода – это общий ресурс,
-                        принадлежащий всем людям. Мы должны обеспечить использование водных ресурсов на благо всех
-                        граждан.
-                    </blockquote>
-
-
                     {!! get_picture_ad([
                         'catalog' => 'design',
-                        'img' => 'ataturk-fr',
+                        'img' => 'waterlevel1',
                         'sizes' => [
                             'wide-sz' => 1280,
                             'desktop-sz' => 1100,
@@ -458,12 +453,19 @@
                         ],
                         'exe' => 'jpg',
                         'isLazy' => true,
-                        'alt' => 'ataturk',
-                    ]) !!}
-
+                        'alt' => '',
+                    ]) !!}                        
 
                     <p>Мы хотим быть компанией, которая постоянно совершенствуется, принося клиентам радость
-                        экологически чистыми, ресурсосберегающими и инновационными технологиями.</p>
+                                            экологически чистыми, ресурсосберегающими и инновационными технологиями.</p>
+
+                    <blockquote>
+                        Будущее в небе, в воздухе, которым мы дышим, и в воде, которую мы пьем. Вода – это самая
+                        основная потребность нашего народа. Каждая капля воды драгоценна. Вода – это общий ресурс,
+                        принадлежащий всем людям. Мы должны обеспечить использование водных ресурсов на благо всех
+                        граждан.
+                        <cite>Мустафа Кемаль Ататюрк</cite>
+                    </blockquote>
 
                     <h2>Наши клиенты</h2>
 
