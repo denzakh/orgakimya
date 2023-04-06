@@ -55,12 +55,14 @@ Route::group([
 
         Route::get(LaravelLocalization::transRoute('routes.contacts'), [ContactController::class, 'index']);
 
+        Route::get('/', function () {
+            return view('home');
+        });
+
         //,...
     });
 
-Route::get('/', function () {
-    return view('home');
-});
+
 
 Route::prefix('admin')->group(function () {
     Route::get('/', [IndexAdminController::class, 'index']);
