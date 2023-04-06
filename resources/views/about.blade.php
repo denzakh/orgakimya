@@ -89,7 +89,8 @@
             @if (LaravelLocalization::getCurrentLocale() === 'en')
                 <div class="content-standart">
 
-                    <p><span class="about__firm">Orga Kimya</span> is a custom design sustainable engineering solutions provider company. We help our
+                    <p><span class="about__firm">Orga Kimya</span> is a custom design sustainable engineering solutions
+                        provider company. We help our
                         customers to REDUCE their COSTS related to WATER & ENERGY & Maintenance and Labor etc while
                         improving efficiency of the systems in order to help our customers meet or exceed their
                         environmental, operational and financial goals.</p>
@@ -107,7 +108,8 @@
                                         <use href="#icon-dollar" width="50" height="50" fill=""></use>
                                     </svg>
                                 </div>
-                                <div class="about__item-text">Optimizing cost vs performance for existing waste water treatment plants.</div>
+                                <div class="about__item-text">Optimizing cost vs performance for existing waste water
+                                    treatment plants.</div>
                             </div>
                         </li>
                         <li class="about__item">
@@ -117,7 +119,8 @@
                                         <use href="#icon-recycling" width="100" height="100" fill=""></use>
                                     </svg>
                                 </div>
-                                <div class="about__item-text">Chemical and biological treatment and equipment solutions for
+                                <div class="about__item-text">Chemical and biological treatment and equipment solutions
+                                    for
                                     "Waste water reuse".</div>
                             </div>
                         </li>
@@ -139,7 +142,8 @@
                                         <use href="#icon-drop" width="60" height="60" fill=""></use>
                                     </svg>
                                 </div>
-                                <div class="about__item-text">Engineering solutions for raw water and recycled waste water
+                                <div class="about__item-text">Engineering solutions for raw water and recycled waste
+                                    water
                                     preperation equipments.</div>
                             </div>
                         </li>
@@ -150,7 +154,8 @@
                                         <use href="#icon-smell2" width="60" height="60" fill=""></use>
                                     </svg>
                                 </div>
-                                <div class="about__item-text">Elimination of bad odours in some spesific processes or in
+                                <div class="about__item-text">Elimination of bad odours in some spesific processes or
+                                    in
                                     waste water treatment plants with neutralization process.</div>
                             </div>
                         </li>
@@ -161,12 +166,13 @@
                                         <use href="#icon-gear" width="50" height="50" fill=""></use>
                                     </svg>
                                 </div>
-                                <div class="about__item-text">Process water treatment solutions especially for fiber cement
+                                <div class="about__item-text">Process water treatment solutions especially for fiber
+                                    cement
                                     industry, car painting processes, oil recover processes, other raw metal recovery
                                     processes.</div>
                             </div>
                         </li>
-                    </ul>                    
+                    </ul>
                 </div>
 
 
@@ -192,7 +198,7 @@
                     ]) !!}
 
                     <p>To be a company that continuously improves itself, guarantees the satisfaction of all its
-                        customers with nature-friendly, value adding, innovative technologies.</p>                    
+                        customers with nature-friendly, value adding, innovative technologies.</p>
 
                     <blockquote>
                         The future is in the skies, in the air we breathe, and in the water we drink. Water is the most
@@ -208,20 +214,12 @@
                     </p>
 
                 </div>
-
-
-
-
-
-
-
-
-
             @endif
             @if (LaravelLocalization::getCurrentLocale() === 'tr')
                 <div class="content-standart">
 
-                    <p><span class="about__firm">Orga Kimya</span>, sürdürülebilir, doğa dostu ve özel tasarım mühendislik çözümleri sağlayan bir
+                    <p><span class="about__firm">Orga Kimya</span>, sürdürülebilir, doğa dostu ve özel tasarım
+                        mühendislik çözümleri sağlayan bir
                         firmadır. Müşterilerimizin çevresel, operasyonel ve finansal hedeflerini karşılaşmalarına ve
                         aşmalarına katkı sağlamak için ilgili sistemlerin verimliliğini artırırken SU & ENERJİ & Bakım
                         ve İşçilik vb. ile ilgili MALİYETLERİNİ AZALTMAlarına yardımcı oluyoruz.</p>
@@ -239,7 +237,8 @@
                                         <use href="#icon-dollar" width="50" height="50" fill=""></use>
                                     </svg>
                                 </div>
-                                <div class="about__item-text">Mevcut atık su arıtma tesisleri için maliyet ve performans
+                                <div class="about__item-text">Mevcut atık su arıtma tesisleri için maliyet ve
+                                    performans
                                     optimizasyonu.</div>
                             </div>
                         </li>
@@ -247,10 +246,12 @@
                             <div class="about__item-row">
                                 <div class="about__item-icon">
                                     <svg class="about__icon-recycling">
-                                        <use href="#icon-recycling" width="100" height="100" fill=""></use>
+                                        <use href="#icon-recycling" width="100" height="100" fill="">
+                                        </use>
                                     </svg>
                                 </div>
-                                <div class="about__item-text">"Atık suların yeniden kullanımı" için kimyasal ve biyolojik
+                                <div class="about__item-text">"Atık suların yeniden kullanımı" için kimyasal ve
+                                    biyolojik
                                     arıtma ve ekipman çözümleri.</div>
                             </div>
                         </li>
@@ -258,10 +259,12 @@
                             <div class="about__item-row">
                                 <div class="about__item-icon">
                                     <svg class="about__icon-snowflake">
-                                        <use href="#icon-snowflake" width="50" height="50" fill=""></use>
+                                        <use href="#icon-snowflake" width="50" height="50" fill="">
+                                        </use>
                                     </svg>
                                 </div>
-                                <div class="about__item-text">Soğutma ve ısıtma suyu sistemlerinin kireçlenme, korozyon ve
+                                <div class="about__item-text">Soğutma ve ısıtma suyu sistemlerinin kireçlenme, korozyon
+                                    ve
                                     mikrobiyolojik kirlenmeden kaynaklanan hasarlara karşı korunması.</div>
                             </div>
                         </li>
@@ -272,7 +275,8 @@
                                         <use href="#icon-drop" width="60" height="60" fill=""></use>
                                     </svg>
                                 </div>
-                                <div class="about__item-text">Ham su ve geri dönüştürülmüş atık su hazırlama ekipmanları
+                                <div class="about__item-text">Ham su ve geri dönüştürülmüş atık su hazırlama
+                                    ekipmanları
                                     için mühendislik çözümleri.</div>
                             </div>
                         </li>
@@ -294,8 +298,10 @@
                                         <use href="#icon-gear" width="50" height="50" fill=""></use>
                                     </svg>
                                 </div>
-                                <div class="about__item-text">Özellikle fibercement sektörü, araba boyama prosesleri, yağ
-                                    geri kazanım prosesleri, diğer ham metal geri kazanım prosesleri için proses suyu arıtma
+                                <div class="about__item-text">Özellikle fibercement sektörü, araba boyama prosesleri,
+                                    yağ
+                                    geri kazanım prosesleri, diğer ham metal geri kazanım prosesleri için proses suyu
+                                    arıtma
                                     çözümleri.</div>
                             </div>
                         </li>
@@ -340,18 +346,12 @@
                         paylaşıyoruz.</p>
 
                 </div>
-
-
-
-
-
-
-
             @endif
             @if (LaravelLocalization::getCurrentLocale() === 'ru')
                 <div class="content-standart">
 
-                    <p><span class="about__firm">Orga Kimya</span> — компания-поставщик устойчивых инженерных решений по индивидуальному проекту.
+                    <p><span class="about__firm">Orga Kimya</span> — компания-поставщик устойчивых инженерных решений
+                        по индивидуальному проекту.
                         Мы помогаем нашим клиентам <strong>снижать затраты</strong>, связанные с <strong>водой,
                             энергетикой</strong>, техническим обслуживанием, трудовыми затратами и т. д., одновременно
                         повышая эффективность систем, чтобы помочь нашим клиентам достичь свои экологические,
@@ -379,10 +379,12 @@
                             <div class="about__item-row">
                                 <div class="about__item-icon">
                                     <svg class="about__icon-recycling">
-                                        <use href="#icon-recycling" width="100" height="100" fill=""></use>
+                                        <use href="#icon-recycling" width="100" height="100" fill="">
+                                        </use>
                                     </svg>
                                 </div>
-                                <div class="about__item-text">Решения по химической и биологической очистке и оборудованию
+                                <div class="about__item-text">Решения по химической и биологической очистке и
+                                    оборудованию
                                     для «Повторного использования сточных вод».</div>
                             </div>
                         </li>
@@ -390,7 +392,8 @@
                             <div class="about__item-row">
                                 <div class="about__item-icon">
                                     <svg class="about__icon-snowflake">
-                                        <use href="#icon-snowflake" width="50" height="50" fill=""></use>
+                                        <use href="#icon-snowflake" width="50" height="50" fill="">
+                                        </use>
                                     </svg>
                                 </div>
                                 <div class="about__item-text">Обработка систем охлаждения и отопления от повреждений,
@@ -404,7 +407,8 @@
                                         <use href="#icon-drop" width="60" height="60" fill=""></use>
                                     </svg>
                                 </div>
-                                <div class="about__item-text">Инженерные решения для оборудования подготовки сырой воды и
+                                <div class="about__item-text">Инженерные решения для оборудования подготовки сырой воды
+                                    и
                                     оборотных сточных вод.</div>
                             </div>
                         </li>
@@ -427,7 +431,8 @@
                                     </svg>
                                 </div>
                                 <div class="about__item-text">Решения для очистки технологической воды, особенно для
-                                    фиброцементной промышленности, процессов покраски автомобилей, процессов восстановления
+                                    фиброцементной промышленности, процессов покраски автомобилей, процессов
+                                    восстановления
                                     масла, других процессов восстановления металлического сырья.</div>
                             </div>
                         </li>
@@ -454,10 +459,10 @@
                         'exe' => 'jpg',
                         'isLazy' => true,
                         'alt' => '',
-                    ]) !!}                        
+                    ]) !!}
 
                     <p>Мы хотим быть компанией, которая постоянно совершенствуется, принося клиентам радость
-                                            экологически чистыми, ресурсосберегающими и инновационными технологиями.</p>
+                        экологически чистыми, ресурсосберегающими и инновационными технологиями.</p>
 
                     <blockquote>
                         Будущее в небе, в воздухе, которым мы дышим, и в воде, которую мы пьем. Вода – это самая

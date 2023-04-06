@@ -21,10 +21,10 @@
                                     ]) !!}
                                 </div>
                                 <div class="posts__content">
-                                    
+
                                     <div class="posts__card-text">
                                         {{ $post->text }}
-                                    </div>                                
+                                    </div>
                                 </div>
                             </div>
                         </section>

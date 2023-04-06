@@ -1,8 +1,3 @@
-@php
-    
-@endphp
-
-
 <x-layout>
     <div class="container">
         <div class="page">

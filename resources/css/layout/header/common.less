@@ -57,6 +57,7 @@
 .header__r-item {
 	color: rgba(255,255,255,0.6);
 	font-size: 18px;
+	margin-right: 17px;
 }
 .header__tel,
 .header__email {
@@ -77,18 +78,25 @@
 .header__lng-item {
 	list-style-type: none;
 	text-transform: capitalize;
+}
+.header__lng-row {
 	display: flex;
 	align-items: center;
-	gap: 10px;
+	gap: 10px;	
 }
 .header__lng-content {
 	font-size: 16px;
 }
 .header__lng-link {
-	.link-dashed(rgba(255,255,255,0.7), #fedd4b);
+	.no-link;
+}
+a .header__lng-text {
+	.link-dashed-mono(rgba(255,255,255,0.7));
+}
+a:hover .header__lng-text {
+	.link-dashed-mono(#fedd4b);
 }
 .header__lng-current {
-	// font-weight: bold;
 	text-shadow: 1px 1px 10px rgba(255,255,255,0.8);
 }
 .header__lng-icon {

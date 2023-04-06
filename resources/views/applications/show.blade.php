@@ -12,13 +12,13 @@
                         'exe' => 'jpg',
                         'alt' => $application->title,
                         'sizes' => [
-	                        'normal' => 1200,
-                        	'normal' => 640,
-                        	'thumbnail' => 320,
-                        ]
+                            'normal' => 1200,
+                            'normal' => 640,
+                            'thumbnail' => 320,
+                        ],
                     ]) !!}
                 </div>
-                <div class="application__text content-standart">{!! $application->text !!}</div>	
+                <div class="application__text content-standart">{!! $application->text !!}</div>
             </div>
             <div class="page__bottom"></div>
         </div>
