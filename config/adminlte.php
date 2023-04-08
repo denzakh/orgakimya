@@ -348,6 +348,11 @@ return [
             'url' => 'admin/design',
             'icon' => 'fas fa-fw fa-image',
         ],
+        [
+            'text' => 'Upload shared image',
+            'url' => 'admin/shared',
+            'icon' => 'fas fa-fw fa-image',
+        ],
         // ['header' => 'account_settings'],
         // [
         //     'text' => 'profile',

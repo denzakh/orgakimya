@@ -9,6 +9,8 @@ use App\Http\Controllers\Admin\PostAdminController;
 use App\Http\Controllers\Admin\ServiceAdminController;
 use App\Http\Controllers\Admin\SettingAdminController;
 use App\Http\Controllers\Admin\UplodeDesignAdminController;
+use App\Http\Controllers\Admin\UplodeSharedAdminController;
+
 use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ContactController;
@@ -34,10 +36,6 @@ Route::group([
     'prefix' => LaravelLocalization::setLocale(),
     'middleware' => ['localize']],
     function () {
-        /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
-        // Route::get('/', function () {
-        //     return View::make('main');
-        // });
 
         Route::get(LaravelLocalization::transRoute('routes.about'), [AboutController::class, 'index']);
 
@@ -76,6 +74,8 @@ Route::prefix('admin')->group(function () {
 
     Route::get('design', [UplodeDesignAdminController::class, 'index'])->name('design.index');
     Route::post('design', [UplodeDesignAdminController::class, 'save'])->name('design.save');
+    Route::get('shared', [UplodeSharedAdminController::class, 'index'])->name('shared.index');
+    Route::post('shared', [UplodeSharedAdminController::class, 'save'])->name('shared.save');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {

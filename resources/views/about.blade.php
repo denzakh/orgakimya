@@ -490,10 +490,12 @@
                         <div class="partner__item">
                             <div class="partner__img-box">
                                 {!! get_picture_th([
-                                    'catalog' => 'partners/200/',
+                                    'catalog' => 'partners/200',
                                     'img' => $partner['img'],
-                                    'exe' => 'png',
+                                    'ext' => 'png',
                                     'alt' => $partner->title,
+                                    'width' => '200',
+                                    'height' => '150',
                                 ]) !!}
                             </div>
                             <div class="partner__title">{{ $partner->title }} </div>

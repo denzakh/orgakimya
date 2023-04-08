@@ -1,26 +1,23 @@
 <x-layout>
-    <h1>Welcome</h1>
+
+    <div class="container">
+        <div class="page">
+            <div class="page__title page__title--one">
+                <h1>{{ __('Waste Water Treatment and Reuse') }}</h1>
+            </div>
 
 
-    <a href="{{ LaravelLocalization::localizeUrl('/about') }}">{{ LaravelLocalization::localizeUrl('/about') }}</a>
+                <div class="content-standart">
+                	111
+                </div>
 
-    <a href="{{ LaravelLocalization::localizeUrl('/posts') }}">{{ LaravelLocalization::localizeUrl('/posts') }}</a>
+            </div>
 
-    <p>
-
-        {{ LaravelLocalization::getCurrentLocale() }}
-
-        {{ LaravelLocalization::getCurrentLocaleNative() }}
-
-    </p>
-
-
-
-
-
-
-
-
-
-
+            <div class="page__bottom"></div>
+        </div>
+    </div>
 </x-layout>
+
+    
+
+

@@ -15,7 +15,7 @@
         <div class="header__row">
             <div class="header__logo-col">
                 @if ($isNotHomePage)
-                    <a href="/" class="header__logo-link">
+                    <a href="/{{ Lang::locale() }}" class="header__logo-link">
                 @endif
                 <div class="header__logo-box no-mobile">
                     {!! get_picture_th([
