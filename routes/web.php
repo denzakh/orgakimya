@@ -11,12 +11,13 @@ use App\Http\Controllers\Admin\SettingAdminController;
 use App\Http\Controllers\Admin\UplodeDesignAdminController;
 use App\Http\Controllers\Admin\UplodeSharedAdminController;
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -53,9 +54,7 @@ Route::group([
 
         Route::get(LaravelLocalization::transRoute('routes.contacts'), [ContactController::class, 'index']);
 
-        Route::get('/', function () {
-            return view('home');
-        });
+        Route::get('/', [HomeController::class, 'index']);
 
         //,...
     });

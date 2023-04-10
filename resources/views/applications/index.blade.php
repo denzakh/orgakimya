@@ -9,12 +9,15 @@
                     @forelse ($applications as $application)
                         <section class="applications__card">
                             <h2 class="visually-hidden">{{ $application->title }}</h2>
-                            <div class="applications__img-box">
+                            <div class="applications__img-box js-del-size">
                                 {!! get_picture_th([
                                     'catalog' => 'applications/thumbnail',
                                     'img' => $application['img'],
-                                    'exe' => 'png',
+                                    'ext' => 'png',
                                     'alt' => $application->title,
+                                    'width' => '100%',
+                                    'height' => '160',
+                                    'isLazy' => false
                                 ]) !!}
                             </div>
                             <div class="applications__card-title-row">

@@ -7,6 +7,11 @@ use Illuminate\View\Component;
 
 class Layout extends Component
 {
+
+	public function __construct(
+        public string $title,
+        public string $description,
+    ) {}
     /**
      * Get the view / contents that represent the component.
      */

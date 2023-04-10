@@ -1,22 +1,42 @@
-<script>
+<script>   
 (()=>{
+    let qs = (cl) => document.querySelector(cl);
+    let qsa = (cl) => document.querySelectorAll(cl);
+
     let toggle = (option) => {
         option.btn.onclick = () => {
             option.parent.classList.toggle("is-open")
         };
     }
 
-    let dom = (cl) => document.querySelector(cl);
+    let deleteImgSize = (tag) => {
+        let imgSizedArr = Array.from(qsa(tag));
+        console.dir(imgSizedArr);        
+
+        imgSizedArr.forEach((img)=> {
+            img.setAttribute('width', 'auto');
+            img.setAttribute('height', 'auto');
+        })
+    }
+
+    
 
     toggle({
-        btn: dom(".js-lng-btn"),
-        parent: dom(".js-lng")
+        btn: qs(".js-lng-btn"),
+        parent: qs(".js-lng")
     });
 
     toggle({
-        btn: dom(".js-nav-btn"),
-        parent: dom(".js-nav")
+        btn: qs(".js-nav-btn"),
+        parent: qs(".js-nav")
     });
+
+    if(document.documentElement.clientWidth > 640) {
+        deleteImgSize(".js-del-size img");
+    }
+    
+
+    
 })();
 </script>
 

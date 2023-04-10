@@ -1,4 +1,14 @@
-<x-layout>
+@php
+
+$ln = LaravelLocalization::getCurrentLocale();
+$titleKey = 'title_'.$ln;
+$title = $page[$titleKey];
+$descriptionKey = 'description_'.$ln;
+$description = $page[$descriptionKey];
+
+@endphp
+
+<x-layout :title="$title" :description="$description">
     <svg class="hidden">
         <defs>
             <symbol id="icon-dollar" viewBox="0 0 32 32" title="icon-dollar" desc="">
@@ -85,6 +95,11 @@
                 <h1>{{ __('Menu: About') }}</h1>
             </div>
 
+<pre>
+@php
+    var_dump($page);
+@endphp
+</pre>
 
             @if (LaravelLocalization::getCurrentLocale() === 'en')
                 <div class="content-standart">
@@ -494,8 +509,8 @@
                                     'img' => $partner['img'],
                                     'ext' => 'png',
                                     'alt' => $partner->title,
-                                    'width' => '200',
-                                    'height' => '150',
+                                    'width' => '100',
+                                    'height' => '75',
                                 ]) !!}
                             </div>
                             <div class="partner__title">{{ $partner->title }} </div>

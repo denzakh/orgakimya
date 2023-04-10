@@ -21,9 +21,11 @@
                     {!! get_picture_th([
                         'catalog' => 'design',
                         'img' => 'logo-header-200',
-                        'exe' => 'png',
+                        'ext' => 'png',
                         'isLazy' => false,
                         'alt' => 'Logo',
+                        'width' => '200',
+                        'height' => '200',
                     ]) !!}
                 </div>
                 <span class="header__logo-box-mobile only-mobile">
@@ -37,7 +39,8 @@
                 <div class="header__contact">
                     <div class="header__r-item">
                         <span class="no-mobile">Tel: </span>
-                        <a href="tel:+{{ $telUrl }}" class="header__tel">
+                        <a href="tel:+{{ $telUrl }}" class="header__tel" rel="noopener" aria-label="{{ __('Phone') }}">
+
                             <span class="no-mobile">{{ $tel }}</span>
                             <span class="only-mobile-ib">
                                 <svg class="header__icon-link header__icon-link--tel">
@@ -49,7 +52,7 @@
                     </div>
                     <div class="header__r-item">
                         <span class="no-mobile">Email: </span> 
-                        <a href="mailto:{{ $email }}" class="header__email">
+                        <a href="mailto:{{ $email }}" class="header__email" rel="noopener" aria-label="{{ __('Email') }}">
                             <span class="no-mobile">{{ $email }}</span>
                             <span class="only-mobile-ib">
                                 <svg class="header__icon-link header__icon-link--email">
@@ -64,7 +67,7 @@
             <div class="header__nav-col js-nav">
                 <div class="header__nav-btn-wrap only-mobile">
                     <div class="header__nav-btn-box">
-                        <button class="js-nav-btn header__nav-btn">
+                        <button class="js-nav-btn header__nav-btn" type="button" aria-label="Open mobile menu">
                             <svg class="burger-svg" width="40" height="40">
                                 <use href="#icon-burger" 
                                     fill=""></use>
@@ -79,7 +82,7 @@
             <div class="header__r-col">
                 <div class="header__lng js-lng">
                     <div class="header__lng-switch only-mobile">
-                        <button type="button" class="header__lng-btn js-lng-btn">
+                        <button type="button" class="header__lng-btn js-lng-btn" type="button" aria-label="Open language menu">
                             <div class="header__lng-icon">
                                 <svg class="header__flag-{{ Lang::locale() }}">
                                     <use href="#flag-{{ Lang::locale() }}" width="38" height="30"

@@ -9,7 +9,7 @@
                     {!! get_picture_ad([
                         'catalog' => 'applications',
                         'img' => $application['img'],
-                        'exe' => 'jpg',
+                        'ext' => 'jpg',
                         'alt' => $application->title,
                         'sizes' => [
                             'normal' => 1200,

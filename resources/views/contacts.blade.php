@@ -65,15 +65,10 @@
                                     {{ $mdsettings['district'] }}</p>
                                 <div class="contacs__address-list">
                                     <div class="contacs__address-item">
-                                        <div class="contacs__address-title">Altayçeşme</div>
-                                        <div class="contacs__address-text">{{ $mdsettings['address1'] }}</div>
-                                        <div class="contacs__address-text"><a href="{{ $mdsettings['gmaplink1'] }}"
-                                                target="_blank">{{ __('View on google map') }}</a></div>
-                                    </div>
-                                    <div class="contacs__address-item">
                                         <div class="contacs__address-title">DAP Royal Center</div>
                                         <div class="contacs__address-text">{{ $mdsettings['address2'] }}</div>
-                                        <div class="contacs__address-text"><a href="{{ $mdsettings['gmaplink2'] }}"
+                                        <div class="contacs__address-text">{{ $mdsettings['address1'] }}</div>
+                                        <div class="contacs__address-text"><a href="{{ $mdsettings['gmaplink1'] }}"
                                                 target="_blank">{{ __('View on google map') }}</a></div>
                                     </div>
                                 </div>
@@ -96,12 +91,7 @@
         integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <script>
         let coordArr1 = [{{ $mdsettings['coord1'] }}];
-        let coordArr2 = [{{ $mdsettings['coord2'] }}];
-
-        c1 = (+coordArr1[0] + +coordArr2[0]) / 2;
-        c2 = (+coordArr1[1] + +coordArr2[1]) / 2;
-
-        let centerArr = [c1, c2];
+        let centerArr = coordArr1;
 
         var map = L.map('map').setView(centerArr, 13);
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -124,6 +114,5 @@
         }
 
         var marker1 = L.marker(coordArr1, markerOptions).addTo(map);
-        var marker2 = L.marker(coordArr2, markerOptions).addTo(map);
     </script>
 </x-layout>

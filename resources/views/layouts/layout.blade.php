@@ -5,17 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="description" content="{{ $description }}">
 
-    <title>{{ $mdsettings['firm'] }}</title>
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=open-sans:400,500" rel="stylesheet" />
+    <title>{{ $title }} - {{ $mdsettings['firm'] }}</title>
 
 
-    @include('layouts.partials.webp')
+    
     <!-- Scripts -->
     @vite(['resources/css/app.less', 'resources/js/app.js'])
+    <!-- тест -->
 </head>
 
 <body class="body">
@@ -28,5 +26,8 @@
     </div>
     @include('layouts.script')
 </body>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=open-sans:400,500&display=swap" rel="stylesheet" />
 
 </html>

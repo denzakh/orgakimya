@@ -16,7 +16,7 @@
                                     {!! get_picture_th([
                                         'catalog' => 'posts/thumbnail',
                                         'img' => $post['img'],
-                                        'exe' => 'png',
+                                        'ext' => 'png',
                                         'alt' => $post->title,
                                     ]) !!}
                                 </div>
