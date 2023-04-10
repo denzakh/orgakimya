@@ -1,5 +1,5 @@
 @php
-    $seo = get_seo(2);
+    $seo = get_seo(1);
 @endphp
 
 <x-layout :title="$seo['title']" :description="$seo['description']">

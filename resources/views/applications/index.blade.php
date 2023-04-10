@@ -17,7 +17,6 @@
                                 {!! get_picture_th([
                                     'catalog' => 'applications/thumbnail',
                                     'img' => $application['img'],
-                                    'ext' => 'png',
                                     'alt' => $application->title,
                                     'width' => '100%',
                                     'height' => '160',
