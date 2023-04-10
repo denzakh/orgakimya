@@ -1,4 +1,8 @@
-<x-layout>
+@php
+    $seo = get_seo(3);
+@endphp
+
+<x-layout :title="$seo['title']" :description="$seo['description']">
     <div class="container">
         <div class="page">
             <div class="page__title">

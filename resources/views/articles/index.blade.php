@@ -1,4 +1,8 @@
-<x-layout>
+@php
+    $seo = get_seo(5);
+@endphp
+
+<x-layout :title="$seo['title']" :description="$seo['description']">
     <svg class="hidden">
         <defs>
             <symbol id="icon-pdf" viewBox="0 0 512 512" title="icon-pdf" desc="">
