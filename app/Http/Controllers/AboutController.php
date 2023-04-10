@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Partner;
-use App\Models\Page;
+
 
 class AboutController extends Controller
 {
@@ -11,7 +11,6 @@ class AboutController extends Controller
     {
         return view('about', [
         	'partners' => Partner::all(),
-        	'page' =>  Page::findOrFail(2)->toArray(),
         ]);
     }
 }

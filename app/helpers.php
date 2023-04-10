@@ -249,3 +249,19 @@ if (! function_exists('get_picture_ad')) {
         return $str;
     }
 }
+
+if (! function_exists('get_seo')) {
+    function get_seo($pageId)
+    {
+        $page = App\Models\Page::findOrFail($pageId)->toArray();
+        $ln = LaravelLocalization::getCurrentLocale();
+        $titleKey = 'title_'.$ln;
+        $descriptionKey = 'description_'.$ln;
+
+        return [
+            'title' => $page[$titleKey],
+            'description' => $page[$descriptionKey],
+        ];
+
+    }
+}

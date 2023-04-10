@@ -1,14 +1,8 @@
 @php
-
-$ln = LaravelLocalization::getCurrentLocale();
-$titleKey = 'title_'.$ln;
-$title = $page[$titleKey];
-$descriptionKey = 'description_'.$ln;
-$description = $page[$descriptionKey];
-
+    $seo = get_seo(2);
 @endphp
 
-<x-layout :title="$title" :description="$description">
+<x-layout :title="$seo['title']" :description="$seo['description']">
     <svg class="hidden">
         <defs>
             <symbol id="icon-dollar" viewBox="0 0 32 32" title="icon-dollar" desc="">
@@ -94,13 +88,7 @@ $description = $page[$descriptionKey];
             <div class="page__title">
                 <h1>{{ __('Menu: About') }}</h1>
             </div>
-
-<pre>
-@php
-    var_dump($page);
-@endphp
-</pre>
-
+            
             @if (LaravelLocalization::getCurrentLocale() === 'en')
                 <div class="content-standart">
 

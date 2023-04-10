@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Application;
 use App\Models\Service;
 use App\Models\Post;
-use App\Models\Page;
 
 class HomeController extends Controller
 {
@@ -18,7 +17,6 @@ class HomeController extends Controller
             'applications' => Application::all(),
             'services' => Service::all(),
             'posts' => Post::all(),
-            'page' =>  Page::findOrFail(1)->toArray(),
         ]);
     }
 }

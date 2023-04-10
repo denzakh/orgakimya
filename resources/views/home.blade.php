@@ -1,14 +1,8 @@
 @php
-
-$ln = LaravelLocalization::getCurrentLocale();
-$titleKey = 'title_'.$ln;
-$title = $page[$titleKey];
-$descriptionKey = 'description_'.$ln;
-$description = $page[$descriptionKey];
-
+    $seo = get_seo(2);
 @endphp
 
-<x-layout :title="$title" :description="$description">
+<x-layout :title="$seo['title']" :description="$seo['description']">
     <div class="container">
         <div class="page">
             <div class="page__title page__title--one">
