@@ -1,0 +1,27 @@
+.home__rotate {
+    display: flex;
+    flex-direction: column;
+}
+
+.home__s-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+    margin: 40px 0;
+}
+
+.home__figure {
+    position: relative;
+    margin-bottom: 35px;
+    &:before {
+        width: 54px;
+        height: 54px;
+        
+        top: -10px;
+        left: -19px;
+        z-index: -1;
+    }
+    a {
+        background-color: #ffffff;
+    }
+}

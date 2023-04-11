@@ -1,0 +1,78 @@
+.home__rotate {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.home__slide-img-box {
+    margin-top: 40px;
+    padding-bottom: 20px;
+}
+
+.home__s-list {
+    display: grid;
+    grid-template-columns: 9fr 7fr 4fr;
+    grid-gap: 60px;
+    margin-top: 40px;
+    padding-bottom: 20px;
+}
+.home__s-item {
+     
+}
+
+
+.home__s-text-box {
+    margin-top: 15px;
+    font-size: 1em;
+    // max-width: 280px;   
+}
+.home__s-item--drop {
+    .home__s-text-box {
+        // max-width: 170px;  
+    }
+    
+}
+
+
+.home__item-icon {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+.home__item-icon svg {
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+.home__icon-recycling {
+    fill: #75C00E;
+}
+.home__icon-snowflake {
+    // fill: #00D7EB;
+     fill: #EB8500;
+}
+.home__icon-drop {
+    // fill: #338BF0;
+    fill: #00cfff;
+}
+
+.home__figure {
+    position: relative;
+    margin-bottom: 45px;
+    &:before {
+        content: "";
+        position: absolute;
+        background: url("/storage/images/design/svg/hexagon.svg") 0 0 no-repeat;
+        background-size: contain;
+        width: 95px;
+        height: 95px;
+        
+        top: -19px;
+        left: -36px;
+        z-index: -1;
+    }
+    a {
+        background-color: #ffffff;
+    }
+}

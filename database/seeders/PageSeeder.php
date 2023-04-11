@@ -10,9 +10,9 @@ class PageSeeder extends Seeder
     public $pages = [
         [   'parent_id' => 0,
             'slug' => 'home',
-            'title_en' => '',
-            'title_tr' => '',
-            'title_ru' => '',
+            'title_en' => 'Home',
+            'title_tr' => 'Ana sayfa',
+            'title_ru' => 'Главная',
             'promo_en' => '',
             'promo_tr' => '',
             'promo_ru' => '',

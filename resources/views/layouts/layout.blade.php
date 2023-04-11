@@ -10,9 +10,11 @@
 
     <title>
         @if(isset($description))
-            {{ $title }} - 
+            {{ $title }} - {{ $mdsettings['firm'] }}
+        @else
+            {{ $mdsettings['firm'] }}
         @endif
-        {{ $mdsettings['firm'] }}
+        
     </title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/storage/images/icons/apple-touch-icon.png">

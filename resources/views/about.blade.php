@@ -111,8 +111,10 @@
                                         <use href="#icon-dollar" width="50" height="50" fill=""></use>
                                     </svg>
                                 </div>
-                                <div class="about__item-text">Optimizing cost vs performance for existing waste water
-                                    treatment plants.</div>
+                                <div class="about__item-text">
+                                    Optimizing cost vs performance for existing waste water
+                                    treatment plants.
+                                </div>
                             </div>
                         </li>
                         <li class="about__item">
@@ -122,9 +124,10 @@
                                         <use href="#icon-recycling" width="100" height="100" fill=""></use>
                                     </svg>
                                 </div>
-                                <div class="about__item-text">Chemical and biological treatment and equipment solutions
-                                    for
-                                    "Waste water reuse".</div>
+                                <div class="about__item-text">
+                                    Chemical and biological treatment and equipment solutions
+                                    for "Waste water reuse".
+                                </div>
                             </div>
                         </li>
                         <li class="about__item">
@@ -210,6 +213,8 @@
                         citizens.
                         <cite>Mustafa Kemal Ataturk</cite>
                     </blockquote>
+
+                    <div id="partner"></div>
 
                     <h2>Our clients</h2>
 
@@ -343,6 +348,8 @@
                         <cite>Mustafa Kemal Atatürk</cite>
                     </blockquote>
 
+                    <div id="partner"></div>
+
                     <h2>Müşterilerimiz</h2>
 
                     <p>Türkiye'nin en büyük şirketleri bizim müşterilerimizdir. Yabancı müşteriler için de projeler
@@ -474,6 +481,8 @@
                         граждан.
                         <cite>Мустафа Кемаль Ататюрк</cite>
                     </blockquote>
+
+                    <div id="partner"></div>
 
                     <h2>Наши клиенты</h2>
 
