@@ -35,45 +35,62 @@
 
             @if (LaravelLocalization::getCurrentLocale() === 'en')
                 <div class="home_promo">
-                    <p><a href="{{ LaravelLocalization::getURLFromRouteNameTranslated($lng, 'routes.about') }}">Orga Kimya</a> is a Turkish company specializing in the treatment of wastewater, extracting useful substances from it, protection of heat exchange systems from corrosion.</p>
-                    <p>The introduction of modern technologies allows <a href="{{ LaravelLocalization::getURLFromRouteNameTranslated($lng, 'routes.about') }}#partner">our customers</a> to significantly save on consumables, extend the service life of technical systems and meet the requirements of environmental legislation.</p>
-                 </div>
+                    <p><a href="{{ LaravelLocalization::getURLFromRouteNameTranslated($lng, 'routes.about') }}">Orga
+                            Kimya</a> is a Turkish company specializing in the treatment of wastewater, extracting
+                        useful substances from it, protection of heat exchange systems from corrosion.</p>
+                    <p>The introduction of modern technologies allows <a
+                            href="{{ LaravelLocalization::getURLFromRouteNameTranslated($lng, 'routes.about') }}#partner">our
+                            customers</a> to significantly save on consumables, extend the service life of technical
+                        systems and meet the requirements of environmental legislation.</p>
+                </div>
             @endif
 
             @if (LaravelLocalization::getCurrentLocale() === 'tr')
                 <div class="home_promo home_promo--tr">
-                    <p><a href="{{ LaravelLocalization::getURLFromRouteNameTranslated($lng, 'routes.about') }}">Orga Kimya</a>, atık suyun arıtılması ve atık sudan yararlı maddeler çıkarılması konusunda uzmanlaşmış bir Türk şirketidir. , ısı değişim sistemlerinin korozyondan korunması.</p>
-                    <p>Modern teknolojilerin kullanıma sunulması, <a href="{{ LaravelLocalization::getURLFromRouteNameTranslated($lng, 'routes.about') }}#partner">müşterilerimizin</a> sarf malzemelerinden önemli ölçüde tasarruf etmesine, teknik sistemlerin hizmet ömrünü ve çevre mevzuatının gerekliliklerini karşılar.</p>
-                </div> 
+                    <p><a href="{{ LaravelLocalization::getURLFromRouteNameTranslated($lng, 'routes.about') }}">Orga
+                            Kimya</a>, atık suyun arıtılması ve atık sudan yararlı maddeler çıkarılması konusunda
+                        uzmanlaşmış bir Türk şirketidir. , ısı değişim sistemlerinin korozyondan korunması.</p>
+                    <p>Modern teknolojilerin kullanıma sunulması, <a
+                            href="{{ LaravelLocalization::getURLFromRouteNameTranslated($lng, 'routes.about') }}#partner">müşterilerimizin</a>
+                        sarf malzemelerinden önemli ölçüde tasarruf etmesine, teknik sistemlerin hizmet ömrünü ve çevre
+                        mevzuatının gerekliliklerini karşılar.</p>
+                </div>
             @endif
 
             @if (LaravelLocalization::getCurrentLocale() === 'ru')
                 <div class="home__promo">
-                    <p><a href="{{ LaravelLocalization::getURLFromRouteNameTranslated($lng, 'routes.about') }}">Orga Kimya</a> — турецкая компания, специализирующаяся на очистке сточных вод, извлечением из них полезных веществ, защите систем теплообмена от корозии.</p> 
-                    <p>Внедрение современных технологий позволяет <a href="{{ LaravelLocalization::getURLFromRouteNameTranslated($lng, 'routes.about') }}#partner">нашим клиентам</a> существенно экономить на расходных материалах, продлить срок службы технических систем и соответствовать требованиям экологического законодательства.</p>
+                    <p><a href="{{ LaravelLocalization::getURLFromRouteNameTranslated($lng, 'routes.about') }}">Orga
+                            Kimya</a> — турецкая компания, специализирующаяся на очистке сточных вод, извлечением из них
+                        полезных веществ, защите систем теплообмена от корозии.</p>
+                    <p>Внедрение современных технологий позволяет <a
+                            href="{{ LaravelLocalization::getURLFromRouteNameTranslated($lng, 'routes.about') }}#partner">нашим
+                            клиентам</a> существенно экономить на расходных материалах, продлить срок службы технических
+                        систем и соответствовать требованиям экологического законодательства.</p>
                 </div>
             @endif
 
-
-            
         </div>
 
         <div class="home__rotate">
             <div class="page home content-standart">
 
-                <h2 class="home__figure"><a href="{{ LaravelLocalization::getURLFromRouteNameTranslated($lng, 'routes.services') }}">{{ __('Menu: Services') }}</a></h2>
+                <h2 class="home__figure"><a
+                        href="{{ LaravelLocalization::getURLFromRouteNameTranslated($lng, 'routes.services') }}">{{ __('Menu: Services') }}</a>
+                </h2>
                 @if (LaravelLocalization::getCurrentLocale() === 'en')
-                    <p>We provide laboratory services for water analysis for the presence of any substances.<br> We provide consultations:</p>
+                    <p>We provide laboratory services for water analysis for the presence of any substances.<br> We
+                        provide consultations:</p>
                 @endif
 
                 @if (LaravelLocalization::getCurrentLocale() === 'tr')
-                    <p>Herhangi bir maddenin varlığına yönelik su analizi için laboratuvar hizmetleri sağlıyoruz.<br> Danışmanlık hizmeti veriyoruz:</p>
+                    <p>Herhangi bir maddenin varlığına yönelik su analizi için laboratuvar hizmetleri sağlıyoruz.<br>
+                        Danışmanlık hizmeti veriyoruz:</p>
                 @endif
 
                 @if (LaravelLocalization::getCurrentLocale() === 'ru')
-                   <p>Мы оказываем лабораторные услуги по анализу воды на наличие любых веществ.<br> Проводим консультации:</p>
-                @endif    
-                
+                    <p>Мы оказываем лабораторные услуги по анализу воды на наличие любых веществ.<br> Проводим
+                        консультации:</p>
+                @endif
 
                 <div class="home__s-list">
                     <div class="home__s-item home__s-item--recycling">
@@ -86,17 +103,20 @@
                         </div>
                         <div class="home__s-text-box">
                             @if (LaravelLocalization::getCurrentLocale() === 'en')
-                                for the implementation and operation of chemical conditioning for wastewater treatment and water recovery systems
+                                for the implementation and operation of chemical conditioning for wastewater treatment
+                                and water recovery systems
                             @endif
 
                             @if (LaravelLocalization::getCurrentLocale() === 'tr')
-                                atık su arıtma ve su geri kazanım sistemleri için kimyasal şartlandırmanın uygulanması ve işletilmesi için
+                                atık su arıtma ve su geri kazanım sistemleri için kimyasal şartlandırmanın uygulanması
+                                ve işletilmesi için
                             @endif
 
                             @if (LaravelLocalization::getCurrentLocale() === 'ru')
-                               по внедрению и эксплуатации химического кондиционирования для систем очистки сточных вод и рекуперации воды
+                                по внедрению и эксплуатации химического кондиционирования для систем очистки сточных вод
+                                и рекуперации воды
                             @endif
-                                
+
                         </div>
                     </div>
                     <div class="home__s-item home__s-item--snowflake">
@@ -117,9 +137,9 @@
                             @endif
 
                             @if (LaravelLocalization::getCurrentLocale() === 'ru')
-                               по применению химического кондиционирования в системах охлаждения и отопления
+                                по применению химического кондиционирования в системах охлаждения и отопления
                             @endif
-                                
+
                         </div>
                     </div>
                     <div class="home__s-item home__s-item--drop">
@@ -140,20 +160,20 @@
                             @endif
 
                             @if (LaravelLocalization::getCurrentLocale() === 'ru')
-                               по управлению водными ресурсами на производстве
+                                по управлению водными ресурсами на производстве
                             @endif
-                                
+
                         </div>
                     </div>
                 </div>
-            </div>     
+            </div>
 
             <div class="home__applications">
                 <div class="home__slide-img-box">
 
                     {!! get_picture_ad([
                         'catalog' => 'design',
-                        'img' => 'slide-1-'.$lng,
+                        'img' => 'slide-1-' . $lng,
                         'sizes' => [
                             'wide-sz' => 1280,
                             'desktop-sz' => 1100,
@@ -164,85 +184,88 @@
                         'isLazy' => false,
                         'alt' => '',
                     ]) !!}
-                </div>      
-                              
+                </div>
+
                 <div class="page content-standart">
-                    <h2 class="home__figure"><a href="{{ LaravelLocalization::getURLFromRouteNameTranslated($lng, 'routes.services') }}">{{ __('Menu: Applications') }}</a></h2>
+                    <h2 class="home__figure"><a
+                            href="{{ LaravelLocalization::getURLFromRouteNameTranslated($lng, 'routes.services') }}">{{ __('Menu: Applications') }}</a>
+                    </h2>
 
                     @if (LaravelLocalization::getCurrentLocale() === 'en')
-                        <p>We cooperate with leading manufacturers of environmental solutions and use the most modern technologies:</p>
+                        <p>We cooperate with leading manufacturers of environmental solutions and use the most modern
+                            technologies:</p>
                     @endif
 
                     @if (LaravelLocalization::getCurrentLocale() === 'tr')
-                        <p>Önde gelen çevre çözümleri üreticileriyle işbirliği yapıyoruz ve en modern teknolojileri kullanıyoruz:</p>
+                        <p>Önde gelen çevre çözümleri üreticileriyle işbirliği yapıyoruz ve en modern teknolojileri
+                            kullanıyoruz:</p>
                     @endif
 
                     @if (LaravelLocalization::getCurrentLocale() === 'ru')
-                       <p>Мы сотрудничаем с ведущими производителями экологических решений и используем самые современные технологии:</p> 
+                        <p>Мы сотрудничаем с ведущими производителями экологических решений и используем самые
+                            современные технологии:</p>
                     @endif
-                    
+
                     <ul>
-                    @forelse ($applications as $application)
-                        <li>{{ $application->title }}</li>
-                    @empty
-                    @endforelse
+                        @forelse ($applications as $application)
+                            <li>{{ $application->title }}</li>
+                        @empty
+                        @endforelse
                     </ul>
                 </div>
-            </div>   
+            </div>
         </div>
-
-
-
-
-
-
 
         <div class="page home content-standart">
             @if (LaravelLocalization::getCurrentLocale() === 'en')
-                <h2 class="home__figure"><a href="{{ LaravelLocalization::getURLFromRouteNameTranslated($lng, 'routes.contacts') }}">Contact Us</a></h2>
+                <h2 class="home__figure"><a
+                        href="{{ LaravelLocalization::getURLFromRouteNameTranslated($lng, 'routes.contacts') }}">Contact
+                        Us</a></h2>
                 <p>
-                    Call <a href="tel:+{{ $telUrl }}" class="" rel="noopener" aria-label="{{ __('Phone') }}">
+                    Call <a href="tel:+{{ $telUrl }}" class="" rel="noopener"
+                        aria-label="{{ __('Phone') }}">
                         {{ $tel }}
-                    </a> or send email <a href="mailto:{{ $email }}" class="" rel="noopener" aria-label="{{ __('Email') }}">
+                    </a> or send email <a href="mailto:{{ $email }}" class="" rel="noopener"
+                        aria-label="{{ __('Email') }}">
                         {{ $email }}
                     </a>
                 </p>
-                <p>We will come to your property upon request. Departure of specialists abroad is possible.</p>   
+                <p>We will come to your property upon request. Departure of specialists abroad is possible.</p>
             @endif
 
             @if (LaravelLocalization::getCurrentLocale() === 'tr')
-                <h2 class="home__figure"><a href="{{ LaravelLocalization::getURLFromRouteNameTranslated($lng, 'routes.contacts') }}">Bize Ulaşın</a></h2>
+                <h2 class="home__figure"><a
+                        href="{{ LaravelLocalization::getURLFromRouteNameTranslated($lng, 'routes.contacts') }}">Bize
+                        Ulaşın</a></h2>
                 <p>
-                    Numaralı telefonu arayın <a href="tel:+{{ $telUrl }}" class="" rel="noopener" aria-label="{{ __('Phone') }}"> 
+                    Numaralı telefonu arayın <a href="tel:+{{ $telUrl }}" class="" rel="noopener"
+                        aria-label="{{ __('Phone') }}">
                         {{ $tel }}
-                    </a> veya postaya e-posta gönder <a href="mailto:{{ $email }}" class="" rel="noopener" aria-label="{{ __('Email') }}"> 
-                        {{ $email }}
-                    </a>
-                 </p>
-                 <p>İstek üzerine mülkünüze geleceğiz. Uzmanların yurt dışına gitmesi mümkündür.</p>         
-            @endif
-
-            @if (LaravelLocalization::getCurrentLocale() === 'ru')
-                <h2 class="home__figure"><a href="{{ LaravelLocalization::getURLFromRouteNameTranslated($lng, 'routes.contacts') }}">Свяжитесь с нами</a></h2>
-                <p>
-                    Позвоните <a href="tel:+{{ $telUrl }}" class="" rel="noopener" aria-label="{{ __('Phone') }}">
-                        {{ $tel }}
-                    </a> или напишите на email <a href="mailto:{{ $email }}" class="" rel="noopener" aria-label="{{ __('Email') }}">
+                    </a> veya postaya e-posta gönder <a href="mailto:{{ $email }}" class="" rel="noopener"
+                        aria-label="{{ __('Email') }}">
                         {{ $email }}
                     </a>
                 </p>
-                <p>Приедем на ваш объект по запросу. Возможен выезд специалистов за границу.</p>                
+                <p>İstek üzerine mülkünüze geleceğiz. Uzmanların yurt dışına gitmesi mümkündür.</p>
             @endif
 
-
-
-
+            @if (LaravelLocalization::getCurrentLocale() === 'ru')
+                <h2 class="home__figure"><a
+                        href="{{ LaravelLocalization::getURLFromRouteNameTranslated($lng, 'routes.contacts') }}">Свяжитесь
+                        с нами</a></h2>
+                <p>
+                    Позвоните <a href="tel:+{{ $telUrl }}" class="" rel="noopener"
+                        aria-label="{{ __('Phone') }}">
+                        {{ $tel }}
+                    </a> или напишите на email <a href="mailto:{{ $email }}" class="" rel="noopener"
+                        aria-label="{{ __('Email') }}">
+                        {{ $email }}
+                    </a>
+                </p>
+                <p>Приедем на ваш объект по запросу. Возможен выезд специалистов за границу.</p>
+            @endif
 
             <div class="page__bottom"></div>
         </div>
     </div>
 </x-layout>
-
-    
-
-
