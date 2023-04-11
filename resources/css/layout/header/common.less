@@ -1,126 +1,149 @@
 .header {
-	background-color: #000000;
-	background-image: linear-gradient(-65deg, #071E01, #02391e, #023d36, #0f5454, #175762, #25607d, #205d8d, #333168, #12111d);
-	color: #ffffff;
-	border-bottom: 3px solid #d8b103;
-	padding-top: 20px;
-	padding-bottom: 20px;
+  background-color: #000000;
+  background-image: linear-gradient(-65deg, #071E01, #02391e, #023d36, #0f5454, #175762, #25607d, #205d8d, #333168, #12111d);
+  color: #ffffff;
+  border-bottom: 3px solid #d8b103;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
+
 .header__inner {
-	margin: 0 auto;
-	max-width: 1200px;
-	padding: 0 30px;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 30px;
 }
+
 .header__row {
-    min-height: 100px;	
-	display: grid;
-	grid-template-columns: 200px 1fr 100px;
-	grid-template-rows: auto auto;
-	grid-template-areas:
+  min-height: 100px;
+  display: grid;
+  grid-template-columns: 200px 1fr 100px;
+  grid-template-rows: auto auto;
+  grid-template-areas:
     "logo top lng"
     "logo nav lng";
 }
-.header__logo-col {
-	grid-area: logo;
-}
-.header__logo-link {
 
+.header__logo-col {
+  grid-area: logo;
 }
+
+.header__logo-link {}
+
 .header__logo-box {
-	position: relative;
-	img {
-		-webkit-filter: drop-shadow(3px 5px 5px rgba(0,0,0,0.5));
-		filter: drop-shadow(3px 5px 5px rgba(0,0,0,0.5));
-	}
+  position: relative;
+
+  img {
+    -webkit-filter: drop-shadow(3px 5px 5px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(3px 5px 5px rgba(0, 0, 0, 0.5));
+  }
 }
+
 .header__top-col {
-	grid-area: top;
+  grid-area: top;
 }
+
 .header__nav-col {
-	grid-area: nav;
-	flex-grow: 2;
-	order: 2;
+  grid-area: nav;
+  flex-grow: 2;
+  order: 2;
 }
+
 .header__r-col {
-	grid-area: lng;
-	flex-grow: 0;
-	order: 3;
+  grid-area: lng;
+  flex-grow: 0;
+  order: 3;
 }
+
 .header__contact {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
-	gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 10px;
 }
+
 .header__r-item {
-	color: rgba(255,255,255,0.6);
-	font-size: 18px;
-	margin-right: 17px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 18px;
+  margin-right: 17px;
 }
+
 .header__tel,
 .header__email {
-	.no-border;
-	color: inherit;
-	&:hover {
-		color: #fedd4b;
-	}
+  .no-border;
+  color: inherit;
+
+  &:hover {
+    color: #fedd4b;
+  }
 }
+
 .header__lng {}
+
 .header__lng-list {
-	margin: 0;
-	padding: 0;
-	display: flex;
-	flex-direction: column;
-	gap: 6px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
+
 .header__lng-item {
-	list-style-type: none;
-	text-transform: capitalize;
+  list-style-type: none;
+  text-transform: capitalize;
 }
+
 .header__lng-row {
-	display: flex;
-	align-items: center;
-	gap: 10px;	
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
+
 .header__lng-content {
-	font-size: 16px;
+  font-size: 16px;
 }
+
 .header__lng-link {
-	.no-link;
+  .no-link;
 }
+
 a .header__lng-text {
-	.link-dashed-mono(rgba(255,255,255,0.7));
+  .link-dashed-mono(rgba(255, 255, 255, 0.7));
 }
+
 a:hover .header__lng-text {
-	.link-dashed-mono(#fedd4b);
+  .link-dashed-mono(#fedd4b);
 }
+
 .header__lng-current {
-	text-shadow: 1px 1px 10px rgba(255,255,255,0.8);
+  text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.8);
 }
+
 .header__lng-icon {
-	width: 26px;
-	height: 22px;
-	border-radius: 5px;
-	overflow: hidden;
-	box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.5);
-	svg {
-		width: 28px;
-		height: 22px;
-		margin-left: -1px;
-	}
+  width: 26px;
+  height: 22px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5);
+
+  svg {
+    width: 28px;
+    height: 22px;
+    margin-left: -1px;
+  }
 }
 
 // таблетный вариант широкий
-@media screen and (min-width: (1021px)) and (max-width: @tab-max-width)  {
-	.header__logo-col {
-		height: 100px;
-	}
-	.header__logo-box {
-		position: relative;
-		width: 200px;
-		height: 100px;
-		transform: translateY(15px);
-	}
+@media screen and (min-width: (1021px)) and (max-width: @tab-max-width) {
+  .header__logo-col {
+    height: 100px;
+  }
+
+  .header__logo-box {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    transform: translateY(15px);
+  }
 }

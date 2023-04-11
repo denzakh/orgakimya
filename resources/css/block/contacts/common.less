@@ -1,94 +1,109 @@
 .contacs__connect-list {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .contacs__dir {
-	flex-grow: 1;
+  flex-grow: 1;
 }
+
 .contacs__dir-title {
-	font-size: 25px;
-	font-weight: bold;
+  font-size: 25px;
+  font-weight: bold;
 }
+
 .contacs__dir-content {}
 
-a.contacts__tel, 
+a.contacts__tel,
 a.contacts__email {
-	color: #096977;
+  color: #096977;
 }
 
 .contacs__list {
-	padding-left: 0;
-	li {
-		list-style-type: none;
-	}
+  padding-left: 0;
+
+  li {
+    list-style-type: none;
+  }
 }
 
 .contacs__list--tel {
-	li::marker {
-		color: #7BA713;
-	}
-}
-.contacs__list--email {
-	li::marker {
-		color: #3eb5a8;
-	}
-}
-.contacs__list--social {
-	li::marker {
-		color: #2e9aff;
-	}
+  li::marker {
+    color: #7BA713;
+  }
 }
 
-.contacs__address {margin-top: 60px;}
+.contacs__list--email {
+  li::marker {
+    color: #3eb5a8;
+  }
+}
+
+.contacs__list--social {
+  li::marker {
+    color: #2e9aff;
+  }
+}
+
+.contacs__address {
+  margin-top: 60px;
+}
 
 .contacs__address-header {
-	margin-top: 0;
+  margin-top: 0;
 }
+
 .contacs__address-row {
-	display: grid;
-	grid-template-columns: 3fr 4fr;
-	grid-gap: 30px;
+  display: grid;
+  grid-template-columns: 3fr 4fr;
+  grid-gap: 30px;
 }
+
 .contacs__address-col {}
+
 .contacs__address-col--text {}
+
 .contacs__address-col--map {
-	display: flex;
+  display: flex;
 }
 
 .contacs__address-list {
-	display: flex;
-	flex-direction: column;
-	gap: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
+
 .contacs__address-city {
-	font-weight: bold;
+  font-weight: bold;
 }
-.contacs__address-item {
-}
+
+.contacs__address-item {}
+
 .contacs__address-title {
-	display: flex;
-	align-items: center;
-	font-size: 25px;
-	font-weight: bold;
-	margin-bottom: 10px;
-	gap: 10px;
-	&:before {
-		content: "";
-		display: inline-block;
-		vertical-align: top;
-		background: url("/storage/images/design/svg/marker-y.svg") -8px -10px no-repeat;
-		width: 28px;
-		height: 38px;
-	}
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  gap: 10px;
+
+  &:before {
+    content: "";
+    display: inline-block;
+    vertical-align: top;
+    background: url("/storage/images/design/svg/marker-y.svg") -8px -10px no-repeat;
+    width: 28px;
+    height: 38px;
+  }
 }
 
 .contacs__address-text {
-	margin-top: 6px;
+  margin-top: 6px;
 }
+
 .contacs__map {
-	filter: invert(100%) hue-rotate(190deg) brightness(180%);
-	min-height: 300px;
-	width: 100%;
+  filter: invert(100%) hue-rotate(190deg) brightness(180%);
+  min-height: 300px;
+  width: 100%;
 }
