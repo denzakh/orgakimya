@@ -182,7 +182,7 @@ class ApplicationSeeder extends Seeder
 	<li>Açık ve yarı açık soğutma sistemeleri biyolojik aktivasyon önleme. (biositler)</li>
 	<li>Kapalı soğutma sistemleri (Chiller grupları vb) korozyon ve birikinti önleme</li>
 	<li>Kapalı soğutma sistemleri (Chiller grupları vb) biyolojik aktivasyon önleme. (biositler)</li>
-	<li>Tek geçişli sistemler (deniz suyu soğutma vb) biyolojik aktivasyon ve korozyon ve birikinti önleme.</li>	
+	<li>Tek geçişli sistemler (deniz suyu soğutma vb) biyolojik aktivasyon ve korozyon ve birikinti önleme.</li>
 </ul>
 ',
             'text_ru' => '<ul>

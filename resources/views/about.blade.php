@@ -88,7 +88,7 @@
             <div class="page__title">
                 <h1>{{ __('Menu: About') }}</h1>
             </div>
-            
+
             @if (LaravelLocalization::getCurrentLocale() === 'en')
                 <div class="content-standart">
 

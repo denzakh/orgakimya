@@ -39,26 +39,26 @@
                 <div class="header__contact">
                     <div class="header__r-item">
                         <span class="no-mobile">Tel: </span>
-                        <a href="tel:+{{ $telUrl }}" class="header__tel" rel="noopener" aria-label="{{ __('Phone') }}">
+                        <a href="tel:+{{ $telUrl }}" class="header__tel" rel="noopener"
+                            aria-label="{{ __('Phone') }}">
 
                             <span class="no-mobile">{{ $tel }}</span>
                             <span class="only-mobile-ib">
                                 <svg class="header__icon-link header__icon-link--tel">
-                                    <use href="#icon-tel" width="40" height="37"
-                                        fill=""></use>
-                                </svg>                                
+                                    <use href="#icon-tel" width="40" height="37" fill=""></use>
+                                </svg>
                             </span>
                         </a>
                     </div>
                     <div class="header__r-item">
-                        <span class="no-mobile">Email: </span> 
-                        <a href="mailto:{{ $email }}" class="header__email" rel="noopener" aria-label="{{ __('Email') }}">
+                        <span class="no-mobile">Email: </span>
+                        <a href="mailto:{{ $email }}" class="header__email" rel="noopener"
+                            aria-label="{{ __('Email') }}">
                             <span class="no-mobile">{{ $email }}</span>
                             <span class="only-mobile-ib">
                                 <svg class="header__icon-link header__icon-link--email">
-                                    <use href="#icon-email" width="34" height="35"
-                                        fill=""></use>
-                                </svg>                                
+                                    <use href="#icon-email" width="34" height="35" fill=""></use>
+                                </svg>
                             </span>
                         </a>
                     </div>
@@ -69,36 +69,36 @@
                     <div class="header__nav-btn-box">
                         <button class="js-nav-btn header__nav-btn" type="button" aria-label="Open mobile menu">
                             <svg class="burger-svg" width="40" height="40">
-                                <use href="#icon-burger" 
-                                    fill=""></use>
+                                <use href="#icon-burger" fill=""></use>
                             </svg>
                         </button>
                     </div>
                 </div>
                 <div class="header__nav-box">
                     @include('layouts.nav')
-                </div>                
+                </div>
             </div>
             <div class="header__r-col">
                 <div class="header__lng js-lng">
                     <div class="header__lng-switch only-mobile">
-                        <button type="button" class="header__lng-btn js-lng-btn" type="button" aria-label="Open language menu">
+                        <button type="button" class="header__lng-btn js-lng-btn" type="button"
+                            aria-label="Open language menu">
                             <div class="header__lng-icon">
                                 <svg class="header__flag-{{ Lang::locale() }}">
-                                    <use href="#flag-{{ Lang::locale() }}" width="38" height="30"
-                                        fill=""></use>
+                                    <use href="#flag-{{ Lang::locale() }}" width="38" height="30" fill="">
+                                    </use>
                                 </svg>
                             </div>
-                        <!-- {{ Lang::locale() }} -->
+                            <!-- {{ Lang::locale() }} -->
                         </button>
                     </div>
                     <div class="header__lng-list-position">
                         <ul class="header__lng-list">
                             @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                                <li class="header__lng-item {!! ($localeCode === Lang::locale()) ? 'is-active' : '' !!}">
+                                <li class="header__lng-item {!! $localeCode === Lang::locale() ? 'is-active' : '' !!}">
                                     @if ($localeCode !== Lang::locale())
                                         <a class="header__lng-link" rel="alternative" hreflang="{{ $localeCode }}"
-                                                    href="/{{ $localeCode }}">
+                                            href="/{{ $localeCode }}">
                                     @endif
                                     <div class="header__lng-row">
                                         <div class="header__lng-icon">
@@ -109,7 +109,7 @@
                                         </div>
                                         <div class="header__lng-content">
                                             <div class="span header__lng-text">
-                                                {{ $properties['native'] }}                                         
+                                                {{ $properties['native'] }}
                                             </div>
                                         </div>
                                     </div>

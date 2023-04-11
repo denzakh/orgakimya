@@ -31,7 +31,7 @@ abstract class LocalizableModel extends Model
         // locale-specific attribute e.g. name_en
 
         if (in_array($attribute, $this->localizable)) {
-            $localeSpecificAttribute = $attribute.'_'.app()->getLocale();
+            $localeSpecificAttribute = $attribute . '_' . app()->getLocale();
 
             return $this->{$localeSpecificAttribute};
         }

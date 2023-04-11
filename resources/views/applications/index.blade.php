@@ -20,7 +20,7 @@
                                     'alt' => $application->title,
                                     'width' => '100%',
                                     'height' => '160',
-                                    'isLazy' => false
+                                    'isLazy' => false,
                                 ]) !!}
                             </div>
                             <div class="applications__card-title-row">

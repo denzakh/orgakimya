@@ -22,8 +22,10 @@
                 <address class="footer__col footer__col--r">
                     <ul class="footer__list footer__list--r">
                         <li><b>{{ __('Address') }}</b>:</li>
-                        <li><a href="{{ $mdsettings['gmaplink1'] }}" target="_blank">{{ $mdsettings['address1'] }}</a></li>
-                        <li><a href="{{ $mdsettings['gmaplink2'] }}" target="_blank">{{ $mdsettings['address2'] }}</a></li>
+                        <li><a href="{{ $mdsettings['gmaplink1'] }}" target="_blank">{{ $mdsettings['address1'] }}</a>
+                        </li>
+                        <li><a href="{{ $mdsettings['gmaplink2'] }}" target="_blank">{{ $mdsettings['address2'] }}</a>
+                        </li>
                         <li>{{ $mdsettings['district'] }}, {{ $mdsettings['city'] }}</li>
                     </ul>
                 </address>

@@ -1,21 +1,18 @@
 {
     "Menu: About": "О компании",
-	"Menu: Services": "Услуги",
-	"Menu: Applications": "Технологии",
-	"Menu: Posts": "Новости",
-	"Menu: Articles": "Статьи",
-	"Menu: Contacts": "Контакты",
-	"Our clients": "Наши клиенты",
-	"All Rights Reserved": "Все права зарегистрированы",
-	"Address": "Адрес",
-	"Email": "Email",
-	"Phone": "Телефон",
-	"Fax": "Факс",
-	"Social": "Социальные сети",
-	"View on google map": "Посмотреть на карте google",
-	"Waste Water Treatment and Reuse": "Очистка, кондиционирование и восстановление в системах водоснабжения / канализации",
-
-
-
-	"Locale: Last": ""
+    "Menu: Services": "Услуги",
+    "Menu: Applications": "Технологии",
+    "Menu: Posts": "Новости",
+    "Menu: Articles": "Статьи",
+    "Menu: Contacts": "Контакты",
+    "Our clients": "Наши клиенты",
+    "All Rights Reserved": "Все права зарегистрированы",
+    "Address": "Адрес",
+    "Email": "Email",
+    "Phone": "Телефон",
+    "Fax": "Факс",
+    "Social": "Социальные сети",
+    "View on google map": "Посмотреть на карте google",
+    "Waste Water Treatment and Reuse": "Очистка, кондиционирование и восстановление в системах водоснабжения / канализации",
+    "Locale: Last": ""
 }

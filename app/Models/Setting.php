@@ -17,7 +17,7 @@ class Setting extends Model
         'address1',
         'address2',
         'coord1',
-        'coord2',        
+        'coord2',
         'gmaplink1',
         'gmaplink2',
         'city',

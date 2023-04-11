@@ -8,7 +8,8 @@ use Illuminate\Support\Facades\DB;
 class PageSeeder extends Seeder
 {
     public $pages = [
-        [   'parent_id' => 0,
+        [
+            'parent_id' => 0,
             'slug' => 'home',
             'title_en' => 'Home',
             'title_tr' => 'Ana sayfa',
@@ -26,7 +27,8 @@ class PageSeeder extends Seeder
             'description_tr' => 'Su / Atık Su Sistemlerinde Arıtma, Şartlandırma ve Geri Kazanım',
             'description_ru' => 'Очистка, кондиционирование и восстановление в системах водоснабжения и канализации',
         ],
-        [   'parent_id' => 0,
+        [
+            'parent_id' => 0,
             'slug' => 'about',
             'title_en' => 'About us',
             'title_tr' => 'Hakkimizda',
@@ -44,7 +46,8 @@ class PageSeeder extends Seeder
             'description_tr' => 'Müşterilerimize su, enerji, bakım ile ilgili maliyetleri azaltmalarında yardımcı oluyoruz',
             'description_ru' => 'Помогаем нашим клиентам снижать затраты, связанные с водой, энергетикой, техническим обслуживанием',
         ],
-        [   'parent_id' => 0,
+        [
+            'parent_id' => 0,
             'slug' => 'services',
             'title_en' => 'Services',
             'title_tr' => 'Hi̇zmetleri̇mi̇z',
@@ -62,7 +65,8 @@ class PageSeeder extends Seeder
             'description_tr' => 'Su temini ve kanalizasyon sistemlerinde temizlik, şartlandırma ve restorasyon hizmetleri',
             'description_ru' => 'Услуги по чистке, кондиционированию и восстановлению в системах водоснабжения и канализации',
         ],
-        [   'parent_id' => 0,
+        [
+            'parent_id' => 0,
             'slug' => 'applications',
             'title_en' => 'Applications',
             'title_tr' => 'Uygulamalar',
@@ -79,8 +83,9 @@ class PageSeeder extends Seeder
             'description_en' => 'Modern technologies for water purification and reuse, extraction of useful substances from wastewater',
             'description_tr' => 'Su arıtma ve yeniden kullanım için modern teknolojiler, atık sudan faydalı maddelerin çıkarılması',
             'description_ru' => 'Современные технологии очистки и переиспользования воды, извлечение из стоков полезных веществ',
-        ], 
-        [   'parent_id' => 0,
+        ],
+        [
+            'parent_id' => 0,
             'slug' => 'posts',
             'title_en' => 'News',
             'title_tr' => 'Haberler',
@@ -98,7 +103,8 @@ class PageSeeder extends Seeder
             'description_tr' => 'OrgaKimya\'dan haberler ve duyurular',
             'description_ru' => 'Новости и объявления компании OrgaKimya',
         ],
-        [   'parent_id' => 0,
+        [
+            'parent_id' => 0,
             'slug' => 'articles',
             'title_en' => 'Libraru',
             'title_tr' => 'Bi̇lgi̇ Bankasi',
@@ -116,7 +122,8 @@ class PageSeeder extends Seeder
             'description_tr' => 'Suyun arıtılması ve yeniden kullanılması ile ilgili makalelerin toplanması',
             'description_ru' => 'Сборник статей про очистку и переиспользование воды',
         ],
-        [   'parent_id' => 0,
+        [
+            'parent_id' => 0,
             'slug' => 'contacts',
             'title_en' => 'Contacts',
             'title_tr' => 'İleti̇şi̇m',

@@ -25,7 +25,7 @@ class AppServiceProvider extends ServiceProvider
         $mdsettings = Setting::findOrFail(1)->toArray();
         View::share('mdsettings', $mdsettings);
 
-        // $mdpages = Page::all()->toArray();        
+        // $mdpages = Page::all()->toArray();
         // View::share('mdpages', $mdpages);
     }
 }

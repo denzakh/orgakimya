@@ -26,7 +26,7 @@ return new class extends Migration
             $table->string('content_ru')->nullable;
             $table->string('route_en')->nullable;
             $table->string('route_tr')->nullable;
-            $table->string('route_ru')->nullable;            
+            $table->string('route_ru')->nullable;
             $table->string('description_en')->nullable;
             $table->string('description_tr')->nullable;
             $table->string('description_ru')->nullable;

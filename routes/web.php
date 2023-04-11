@@ -33,9 +33,11 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::group([
-    'prefix' => LaravelLocalization::setLocale(),
-    'middleware' => ['localize']],
+Route::group(
+    [
+        'prefix' => LaravelLocalization::setLocale(),
+        'middleware' => ['localize']
+    ],
     function () {
 
         Route::get(LaravelLocalization::transRoute('routes.about'), [AboutController::class, 'index']);
@@ -44,20 +46,21 @@ Route::group([
         // Route::get(LaravelLocalization::transRoute('routes.services').'/{id}', [ServiceController::class, 'show']);
 
         Route::get(LaravelLocalization::transRoute('routes.applications'), [ApplicationController::class, 'index']);
-        Route::get(LaravelLocalization::transRoute('routes.applications').'/{id}', [ApplicationController::class, 'show']);
+        Route::get(LaravelLocalization::transRoute('routes.applications') . '/{id}', [ApplicationController::class, 'show']);
 
         Route::get(LaravelLocalization::transRoute('routes.posts'), [PostController::class, 'index']);
-        Route::get(LaravelLocalization::transRoute('routes.posts').'/{id}', [PostController::class, 'show']);
+        Route::get(LaravelLocalization::transRoute('routes.posts') . '/{id}', [PostController::class, 'show']);
 
         Route::get(LaravelLocalization::transRoute('routes.articles'), [ArticleController::class, 'index']);
-        Route::get(LaravelLocalization::transRoute('routes.articles').'/{id}', [ArticleController::class, 'show']);
+        Route::get(LaravelLocalization::transRoute('routes.articles') . '/{id}', [ArticleController::class, 'show']);
 
         Route::get(LaravelLocalization::transRoute('routes.contacts'), [ContactController::class, 'index']);
 
         Route::get('/', [HomeController::class, 'index']);
 
         //,...
-    });
+    }
+);
 
 
 
@@ -83,4 +86,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
