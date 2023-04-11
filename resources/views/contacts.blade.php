@@ -106,7 +106,7 @@
         let myIcon = L.icon({
             iconUrl: '/storage/images/design/svg/marker.svg',
             iconSize: [80, 80],
-            iconAnchor: [22, 94],
+            iconAnchor: [40, 76],
             popupAnchor: [-3, -76],
             shadowUrl: '',
             shadowSize: [68, 95],
